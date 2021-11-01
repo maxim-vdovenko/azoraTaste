@@ -1,0 +1,349 @@
+.logo {
+  @include image('logo.svg', content, center);
+  width: 120px;
+  height: 40px;
+}
+
+.title {
+  @include block();
+
+  h1, h2 {
+    @include block();
+    font-size: 60px;
+    line-height: 60px;
+
+    b {
+      text-align: inherit;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: -0.02em;
+      color: inherit;
+    }
+  }
+
+  &--max {
+    h2 {
+      font-size: 120px;
+      line-height: 120px;
+    }
+  }
+
+  &--center {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+.delimiter {
+  @include block();
+  @include image('patterns/pattern-blue-1.svg', auto 100%, center);
+  height: 46px;
+  
+  &:before, &:after {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    margin-top: -1px;
+    background-color: $color_blue;
+    content: '';
+  }
+
+  &:before {
+    left: 0;
+    right: calc(50% + 52px);    
+  }
+
+  &:after {
+    right: 0;
+    left: calc(50% + 52px);  
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding: 3px 48px 0 48px;
+  border: 1px solid $color_gray;
+  border-radius: 1000px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: $color_text_blue;
+  transition: border-color $time;
+
+  &:hover {
+    border-color: $color_blue;
+  }
+}
+
+.button-like {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  height: 64px;
+  border: 1px solid $color_gray;
+  border-radius: 1000px;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color $time;
+
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: opacity $time;
+  }
+
+  &:before {
+    @include image('like-gray.svg', 20px auto, center);
+  }
+
+  &:after {
+    @include image('like-blue.svg', 20px auto, center);
+    opacity: 0;
+  }
+
+  &:hover {
+    border-color: $color_blue;
+  }
+
+  &.active {
+    &:before {
+      opacity: 0;
+    }
+  
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.button-delete {
+  @include image('delete-gray.svg', 12px auto, center);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid $color_gray;
+  border-radius: 1000px;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color $time;
+
+  &:hover {
+    border-color: $color_blue;
+  }
+}
+
+.button-inBasket {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 4px 30px 0 30px;
+  border: none;
+  border-radius: 1000px;
+  background-color: $color_white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.counter {
+  $counter: &;
+  position: relative;
+  display: inline-flex;
+  height: 64px;
+  border: 1px solid $color_gray;
+  border-radius: 1000px;
+
+  &__minus, &__plus {
+    position: relative;
+    width: 56px;
+    height: 100%;
+    cursor: pointer;
+
+    &:before, &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $color_blue;
+      content: '';
+    }
+  }
+
+  &__minus {
+    border-right: 1px solid $color_gray;
+
+    &:before {
+      width: 6px;
+      height: 2px;
+      margin: -1px 0 0 -1px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__plus {
+    border-left: 1px solid $color_gray;
+
+    &:before {
+      width: 8px;
+      height: 2px;
+      margin: -1px 0 0 -6px;
+    }
+
+    &:after {
+      width: 2px;
+      height: 8px;
+      margin: -4px 0 0 -3px;
+    }
+  }
+
+  &__input {
+    position: relative;
+    width: 86px;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+    color: $color_text_blue;
+  }
+
+  &--min {
+    height: 35px;
+
+    #{$counter}__minus, 
+    #{$counter}__plus {
+      width: 30px;
+    }
+
+    #{$counter}__input {
+      width: 47px;
+      font-size: 13px;
+    }
+  }
+}
+
+
+// .checkbox {
+//   $checkbox: &;
+//   $size: 20px;
+//   $indent: 10px;
+//   position: relative;
+//   display: block;
+//   min-height: $size;
+
+//   label {
+//     position: relative;
+//     min-height: $size;
+//     padding: 1px 0 0 $size + $indent;
+//     color: #F9F9F9;
+//     font-size: 16px;
+//     line-height: 130%;
+//     letter-spacing: -0.01em;
+//     cursor: pointer;
+
+//     &:before, &:after {
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: $size;
+//       height: $size;
+//       content: '';
+//     }
+//     &:before {
+//       box-shadow: 0 0 0 1px #7F8389 inset;
+//       border-radius: 3px;
+//     }
+//     &:after {
+//       @include image('icon-check-yellow.svg', 14px auto, 3px 5px);
+//       display: none;
+//     }
+//   }
+
+//   input {
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+
+//     &:checked + label {
+//       &:after {
+//         display: block;
+//       }
+//     }
+//   }
+
+//   &--conditions {
+//     line-height: 90%;
+//     padding-left: $size + 20px;
+
+//     input {
+//       & + label {
+//         @include inline_block();
+//         font-size: 12px;
+//         line-height: inherit;
+//         padding: 0;
+
+//         &:before, &:after {
+//           left: -($size + 20px);
+//         }
+//       }
+//     }
+
+//     span, a {
+//       @include inline_block();
+//       color: #F9F9F9;
+//       font-size: 12px;
+//       line-height: inherit;
+//       text-decoration: none;
+//       letter-spacing: -0.01em;
+//     }
+
+//     a {
+//       &:hover {
+//         color: $color_text_yellow;
+//       }
+//     }
+//   }
+
+//   &--min {
+//     input {
+//       & + label {
+//         padding: 3px 0 0 $size + 20px;
+//         font-size: 12px;
+//         line-height: 130%;
+//       }
+//     }
+//   }
+// }

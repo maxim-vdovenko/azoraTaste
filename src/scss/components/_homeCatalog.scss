@@ -1,0 +1,114 @@
+.homeCatalog {
+  @include block();
+  margin-top: 220px;
+
+  &__block {
+    @include block();
+  }
+
+  &__box {
+    $box: &;
+    @include flex();
+
+    &-img {
+      @include flex();
+      justify-content: flex-end;
+      width: 50%;
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-cont {
+      position: relative;
+      width: 50%;
+    }
+
+    &-type {
+      @include block();
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &-name {
+      @include inline_block();
+      margin-bottom: 5px;
+      font-size: 60px;
+      line-height: 60px;
+      text-decoration: none;
+
+      b, strong {
+        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      b {
+        @include block();
+      }
+    }
+
+    &-price {
+      @include block();
+    }
+
+    &-description {
+      @include block();
+      margin-top: 40px;
+
+      p {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      #{$box}-img {
+        width: 60%;
+      }
+      
+      #{$box}-cont {
+        width: 40%;
+      }
+    }
+
+    &:nth-child(3n+2) {
+      #{$box}-img {
+        width: 35%;
+      }
+      
+      #{$box}-cont {
+        width: 65%;
+      }
+    }
+
+    &:nth-child(3n+0) {
+      #{$box}-img {
+        width: 50%;
+      }
+      
+      #{$box}-cont {
+        width: 50%;
+      }
+    }
+  }
+
+  &__button {
+    @include flex();
+    padding-left: 50%;
+
+    .button {
+      margin: 0 7px;
+    }
+  }
+}

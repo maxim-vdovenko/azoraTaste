@@ -1,0 +1,48 @@
+.homeReviews {
+  @include block();
+  margin-top: 250px;
+
+  &__row {
+    @include flex();
+  }
+
+  &__col {
+    position: relative;
+    width: 50%;
+
+    .title {
+      max-width: 500px;
+    }
+  }
+
+  &__box {
+    @include block();
+    margin-bottom: 60px;
+
+    &-info {
+      @include block();
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    &-description {
+      @include block();
+
+      p {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      b {
+        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}

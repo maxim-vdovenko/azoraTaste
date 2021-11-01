@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'ArsenicaText';
+  src: local('ArsenicaText-Regular'),
+    url('../fonts/ArsenicaText-Regular.eot?') format('eot'), 
+    url('../fonts/ArsenicaText-Regular.woff') format('woff'), 
+    url('../fonts/ArsenicaText-Regular.ttf') format('truetype'),
+    url('../fonts/ArsenicaText-Regular.svg#ArsenicaText-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArsenicaText';
+  src: local('ArsenicaText-Bold'),
+    url('../fonts/ArsenicaText-Bold.eot?') format('eot'), 
+    url('../fonts/ArsenicaText-Bold.woff') format('woff'), 
+    url('../fonts/ArsenicaText-Bold.ttf') format('truetype'),
+    url('../fonts/ArsenicaText-Bold.svg#ArsenicaText-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

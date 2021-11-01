@@ -1,0 +1,121 @@
+.mainPreview {
+  @include block();
+  height: 1980px;
+  margin-top: -$header_height;
+
+  #{$cont} {
+    height: 100%;
+  }
+
+  &__fon {
+    @include image('main-preview/fon.jpg', auto 1984px, top, repeat-x);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &-desk {
+      @include block();
+      width: 100%;
+      max-width: 1245px;
+      margin: 472px auto 0 auto;
+    }
+  }
+
+  &__block {
+    @include flex();
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &-top {
+      @include block();
+      margin-top: 202px;
+      text-align: center;
+
+      .title {
+        max-width: 550px;
+        margin: 0 auto 30px auto;
+      }
+    }
+
+    &-bottom {
+      @include block();
+      width: 100%;
+      max-width: 910px;
+      margin: 0 auto;
+
+      &:before, &:after {
+        position: absolute;
+        content: '';
+      }
+    
+      &:before {
+        @include image('patterns/pattern-1.svg', content, center);
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 220px;
+      }
+    
+      &:after {
+        @include image('patterns/pattern-2.svg', content, center);
+        top: 130px;
+        right: 0;
+        width: 146px;
+        height: 247px;
+      }
+
+      .title {
+        text-align: center;
+        max-width: 550px;
+        margin: 55px auto 0 auto;
+      }
+
+      .delimiter {
+        max-width: 626px;
+        margin: 23px auto 33px auto;
+      }
+    }
+
+    &-button {
+      @include flex();
+      justify-content: center;
+
+      .button {
+        margin: 0 7px;
+      }
+    }
+
+    &-info {
+      @include block(center);
+      margin-bottom: 29px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 12px;
+      letter-spacing: 0.05em;
+      color: $color_text_blue;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      @include block();
+      max-width: 746px;
+      margin: 0 auto;
+
+      p {
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      b {
+        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}

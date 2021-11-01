@@ -1,0 +1,14 @@
+.scrollbar-track {
+  background-color: $color_gray !important;
+  overflow: hidden;
+
+  &-y {
+    opacity: 1 !important;
+    width: 3px !important;
+
+    .scrollbar-thumb {
+      width: 100% !important;
+      background-color: $color_blue !important;
+    }
+  }
+}

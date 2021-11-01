@@ -1,0 +1,104 @@
+@mixin block($align: left){
+  display: block;
+  position: relative;
+  text-align: $align;
+}
+
+@mixin inline_block($vertical: top, $align: left){
+  display: inline-block;
+  position: relative;
+  text-align: $align;
+  vertical-align: $vertical;
+}
+
+@mixin inline($align: left){
+  display: inline;
+  position: relative;
+  text-align: $align;
+}
+
+@mixin tableDis($x: 100%) {
+  display: table;
+  position: relative;
+  width: $x;
+}
+
+@mixin tableDis_cell($vertical: top, $align: left) {
+  display: table-cell;
+  position: relative;
+  text-align: $align;
+  vertical-align: $vertical;
+}
+
+@mixin table_row() {
+  display: table-row;
+  position: relative;
+}
+
+@mixin flex() {
+  position: relative;
+  display: flex;
+} 
+
+@mixin flex_block($wrap: wrap){
+  display: flex;
+  flex-wrap: $wrap;
+  position: relative;
+}
+
+@mixin flex_content($val: space-between) {
+  justify-content: $val;
+}
+
+@mixin position($pos: absolute, $left: 0, $top: 0, $width: auto, $height: auto) {
+  height: $height;
+  left: $left;
+  position: $pos;
+  top: $top;
+  width: $width;
+}
+
+@mixin column($width: auto, $count: 1, $gap: 0, $rule: none) {
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -moz-column-rule: $rule;
+  -moz-column-width: $width;
+  -webkit-column-count: $count;
+  -webkit-column-gap: $gap;
+  -webkit-column-rule: $rule;
+  -webkit-column-width: $width;
+  column-count: $count;
+  column-gap: $gap;
+  column-rule: $rule;
+  column-width: $width;
+}
+
+@mixin image($image, $cover: cover, $pos: top, $repeat: no-repeat) {
+  background-image: url(#{$path_img}#{$image});
+  background-position: $pos;
+  background-repeat: $repeat;
+  background-size: $cover;
+}
+
+@mixin placeholder($color: #000, $weight: 400) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+}
+
+@mixin b($col: #f00) {
+  border: 1px solid $col;
+}

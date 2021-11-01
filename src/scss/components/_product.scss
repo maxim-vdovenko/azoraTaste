@@ -1,0 +1,151 @@
+.product {
+  @include block();
+  margin-top: 100px;
+
+  &__row {
+    @include flex();
+  }
+
+  &__col {
+    @include flex();
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__slider {
+    @include block();
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-dots {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+
+      li {
+        @include inline_block();
+        margin: 0 8px;
+
+        &.slick-active button {
+          background-color: #C4C4C4;
+        }
+      }
+
+      button {
+        @include block();
+        width: 17px;
+        height: 17px;
+        border: none;
+        border-radius: 1000px;
+        background-color: rgba(196, 196, 196, 0.4);
+        color: transparent;
+        cursor: pointer;
+      }
+    }
+
+    &-box {
+      @include inline_block();
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__top {
+    @include flex();
+    justify-content: space-between;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  &__type {
+    @include flex();
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__region {
+    @include flex();
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+
+    b {
+      margin-left: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__price {
+    @include flex();
+    margin-top: 50px;
+
+    li {
+      @include inline_block();
+      margin-right: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_blue;
+    }
+  }
+
+  &__bottom {
+    @include block();
+    margin: auto 0 200px 0;
+  }
+
+  &__inform {
+    @include block();
+    margin-bottom: 10px;
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_gray;
+    }
+
+    span {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: $color_text_blue;
+    }
+  }
+
+  &__button {
+    @include flex();
+
+    .button, .button-like, .counter {
+      margin-right: 10px;
+    }
+  }
+
+  .title {
+    max-width: 500px;
+  }
+}

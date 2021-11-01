@@ -1,0 +1,48 @@
+.donateSet {
+  @include block();
+  margin: 150px 0 222px 0;
+
+  &__block {
+    @include block();
+
+    .title {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    @include block();
+    margin-top: -40px;
+
+    img {
+      @include block();
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    @include block();
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+
+    p {
+      font-size: 30px;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    b {
+      font-weight: 700;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__button {
+    @include flex();
+    justify-content: center;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,84 @@
+.hFooter {
+  height: $footer_height;
+}
+
+.footer {
+  $footer: &;
+  @include block();
+  height: $footer_height;
+  margin-top: -$footer_height;
+
+  #{$cont} {
+    max-width: 1292px;
+  }
+
+  &__row {
+    @include flex();
+    border-top: 1px solid $color_gray;
+  }
+
+  &__col {
+    @include flex();
+    flex-direction: column;
+
+    &:nth-child(1) {
+      padding-top: 159px;
+      min-width: 310px;
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+      padding-top: 160px;
+    }
+  }
+
+  &__logo {
+    @include image('logo.svg', content, center);
+    width: 120px;
+    height: 40px;
+  } 
+
+  &__menu {
+    @include block();
+    margin-top: 75px;
+
+    li {
+      @include block();
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration: none;
+    }
+  }
+
+  &__info {
+    @include block();
+    margin-bottom: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  &__link {
+    @include block();
+    font-size: 120px;
+    line-height: 110px;
+    text-decoration: none;
+  }
+
+  &__copyright {
+    @include block();
+    margin: auto 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+  }
+}

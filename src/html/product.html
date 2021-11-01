@@ -1,0 +1,70 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="product">
+
+      <div class="container">
+
+        <div class="product__row">
+
+          <div class="product__col">
+
+            <div class="product__slider">
+              <div class="product__slider-box"><a href="#"><img src="./img/product/img-1.png" alt="img" /></a></div>
+              <div class="product__slider-box"><a href="#"><img src="./img/product/img-1.png" alt="img" /></a></div>
+              <div class="product__slider-box"><a href="#"><img src="./img/product/img-1.png" alt="img" /></a></div>
+            </div>
+
+          </div>
+
+          <div class="product__col">
+
+            <div class="product__top">
+              <span class="product__type">Шоколад</span>
+              <span class="product__region">Регион: <b>Минхо</b></span>
+            </div>
+
+            <div class="title"><h1>Шоколад <b>Niepoort ruby Wine chocolate</b></h1></div>
+
+            <ul class="product__price">
+              <li>790 ₽</li>
+              <li>/</li>
+              <li>200 г</li>
+            </ul>
+
+            <div class="product__bottom">
+              <div class="product__inform"><p><span>В наличии</span></p></div>
+              <div class="product__button">
+                
+                <!-- <a class="button" href="#">В корзину</a> -->
+
+                <div class="counter">
+                  <div class="counter__minus"></div>
+                  <input class="counter__input" type="text" value="1" />
+                  <div class="counter__plus"></div>
+                </div>
+
+                <a class="button-like" href="#"></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   
