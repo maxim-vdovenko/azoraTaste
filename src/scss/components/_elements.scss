@@ -92,7 +92,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 64px;
+  width: 64px;
   height: 64px;
   border: 1px solid $color_gray;
   border-radius: 1000px;
@@ -131,6 +131,16 @@
   
     &:after {
       opacity: 1;
+    }
+  }
+
+  &--min {
+    width: 34px;
+    height: 34px;
+    border-color: $color_blue;
+
+    &:before, &:after {
+      background-size: 12px auto;
     }
   }
 }

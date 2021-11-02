@@ -1,0 +1,90 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="catalog">
+
+      <div class="container">
+
+        <div class="catalog__info">
+          <div class="title title--center"><h2>Каталог <b>товаров</b></h2></div>
+          <div class="catalog__text">
+            <p><b>Проект о Португалии</b> и обо всех удивительных вкусах, которые напоминают о ней. В каждом боксе заключена <b>уникальная история.</b> Попробуйте!</p>
+          </div>
+        </div>
+
+        <div class="catalog__top">
+
+          <div class="catalog__top-left">
+
+            <div class="catalog__dropdown">
+              <span class="catalog__dropdown-title">Тип товара</span>
+              <div class="catalog__dropdown-cont">
+                <ul class="catalog__dropdown-list">
+                  <li>
+                    <label class="checkbox"><input type="checkbox" />Боксы (5)</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="catalog__dropdown">
+              <span class="catalog__dropdown-title">Регион</span>
+            </div>
+
+          </div>
+
+          <div class="catalog__top-right">
+            
+            <div class="catalog__dropdown">
+              <span class="catalog__dropdown-title">Сортировать</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="catalog__cont">
+
+          <div class="catalog__box">
+            <a class="button-like button-like--min active" href="#"></a>
+            <div class="catalog__box-img"><a href="#"><img src="./img/catalog/img-1.png" alt="img" /></a></div>
+            <div class="catalog__box-na">
+              <span class="catalog__box-type">Оливковое масло</span>
+
+              <div class="counter">
+                <div class="counter__minus"></div>
+                <input class="counter__input" type="text" value="1" />
+                <div class="counter__plus"></div>
+              </div>
+
+            </div>
+            <div class="catalog__box-name"><a href="#">Оливковое масло Olival da Risca</a></div>
+            <span class="catalog__box-price">11 590 ₽</span>
+          </div>
+
+
+
+        </div>
+
+        <div class="catalog__button">
+
+          <a class="button" href="#">показать еще</a>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

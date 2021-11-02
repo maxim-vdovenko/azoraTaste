@@ -1,0 +1,115 @@
+.catalog {
+  $catalog: &;
+  @include block();
+  padding: 30px 0 250px 0;
+
+  &__info {
+    @include block();
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    @include block();
+    margin-top: 30px;
+
+    p {
+      text-align: center;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    b {
+      font-weight: 700;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__top {
+    @include flex();
+    justify-content: space-between;
+    border-top: 1px solid $color_gray;
+    border-bottom: 1px solid $color_gray;
+    min-height: 55px;
+    margin-top: 70px;
+
+    &-left, &-right {
+      @include flex();
+    }
+
+    &-left {
+      #{$catalog}__dropdown {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__dropdown {
+    @include flex();
+    justify-content: center;
+
+    &-title {
+      @include flex();
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color_text_blue;
+      cursor: pointer;
+
+      &:after {
+        @include inline_block();
+        @include image('arrow-down-blue.svg', content, center);
+        width: 8px;
+        height: 4px;
+        margin-left: 8px;
+        content: '';
+      }
+    }
+
+    &-cont {
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &__cont {
+    @include flex();
+    flex-wrap: wrap;
+    padding-top: 52px;
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    border: 1px solid $color_gray;
+    width: 25%;
+    min-height: 583px;
+
+    &-img {
+      @include block();
+      min-height: 390px;
+
+      a {
+        @include block(center);
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .button-like {
+      position: absolute;
+      top: 15px;
+      right: 14px;
+      z-index: 1;
+    }
+  }
+
+  &__button {
+    @include block(center);
+  }
+}

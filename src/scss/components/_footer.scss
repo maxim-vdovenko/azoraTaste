@@ -54,6 +54,23 @@
       font-size: 20px;
       line-height: 24px;
       text-decoration: none;
+
+      &:after {
+        position: absolute;
+        width: 0;
+        left: 0;
+        bottom: 3px;
+        height: 1px;
+        content: '';
+        background-color: $color_text_blue;
+        transition: width 0.3s ease;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
     }
   }
 
