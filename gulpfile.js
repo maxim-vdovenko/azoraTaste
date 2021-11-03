@@ -32,7 +32,8 @@ gulp.task('js', () => {
       'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
       src + '/js/index.js',
       src + '/js/header.js',
-      src + '/js/product.js'
+      src + '/js/product.js',
+      src + '/js/elements.js',
     ])
   .pipe(concat('index.js'))
   .pipe(gulp.dest(dist + '/js'))

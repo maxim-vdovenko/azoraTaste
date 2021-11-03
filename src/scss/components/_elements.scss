@@ -125,6 +125,8 @@
   }
 
   &.active {
+    border-color: $color_blue;
+    
     &:before {
       opacity: 0;
     }
@@ -137,7 +139,6 @@
   &--min {
     width: 34px;
     height: 34px;
-    border-color: $color_blue;
 
     &:before, &:after {
       background-size: 12px auto;
@@ -180,6 +181,42 @@
   font-size: 10px;
   line-height: 12px;
   cursor: pointer;
+}
+
+.button-more {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 364px;
+  height: 64px;
+  padding: 3px 48px 0 48px;
+  border: 1px dashed $color_gray;
+  border-radius: 1000px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: $color_text_blue;
+  transition: border-color $time;
+
+  &:after {
+    @include inline_block();
+    @include image('arrow-down-blue.svg', content, center);
+    width: 8px;
+    height: 4px;
+    margin: 0 0 2px 8px;
+    content: '';
+  }
+
+  &:hover {
+    border-color: $color_blue;
+  }
 }
 
 .counter {
@@ -265,6 +302,108 @@
   }
 }
 
+.addition {
+  $additionTime: 0.2s;
+  $addition: &;
+  position: relative;
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  border: 1px solid $color_gray;
+  border-radius: 1000px;
+  transition: all $additionTime;
+  overflow: hidden;
+
+  &__minus, &__plus {
+    position: absolute;
+    top: 0;
+    width: 34px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity $additionTime;
+
+    &:before, &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $color_blue;
+      content: '';
+    }
+  }
+
+  &__minus {
+    left: 0;
+    opacity: 0;
+
+    &:before {
+      width: 6px;
+      height: 1px;
+      margin: 0 0 0 -5px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &__plus {
+    right: 0;
+
+    &:before {
+      width: 7px;
+      height: 1px;
+      margin: 0 0 0 -3px;
+    }
+
+    &:after {
+      width: 1px;
+      height: 7px;
+      margin: -3px 0 0 0px;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: $color_text_blue;
+    transition: opacity $additionTime;
+    opacity: 0;
+  }
+
+  &:hover {
+    border-color: $color_blue;
+  }
+
+  &.active {
+    width: 68px;
+    border-color: $color_blue;
+
+    #{$addition}__minus {
+      opacity: 1;
+    }
+
+    #{$addition}__plus {
+      opacity: 1;
+    }
+
+    #{$addition}__value {
+      opacity: 1;
+    }
+  }
+}
 
 // .checkbox {
 //   $checkbox: &;

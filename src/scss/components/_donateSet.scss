@@ -1,12 +1,12 @@
 .donateSet {
   @include block();
-  margin: 150px 0 222px 0;
+  margin: 167px 0 222px 0;
 
   &__block {
     @include block();
 
     .title {
-      max-width: 800px;
+      max-width: 880px;
       margin: 0 auto;
     }
   }
@@ -25,7 +25,7 @@
   &__description {
     @include block();
     max-width: 1100px;
-    margin: 20px auto 0 auto;
+    margin: 44px auto 0 auto;
 
     p {
       font-size: 30px;
@@ -33,16 +33,20 @@
       text-align: center;
     }
 
-    b {
+    b, a {
       font-weight: 700;
       font-size: inherit;
       line-height: inherit;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
   &__button {
     @include flex();
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 56px;
   }
 }

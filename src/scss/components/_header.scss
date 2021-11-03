@@ -2,6 +2,10 @@
   @include block();
   z-index: 1;
 
+  #{$cont} {
+    max-width: 1600px;
+  }
+
   &__row {
     @include flex();
     justify-content: space-between;
@@ -83,18 +87,22 @@
   }
 
   &__basketNav {
-    @include flex();
-    @include image('basket-blue.svg', auto 14px, left 10px center);
-    justify-content: center;
-    align-items: center;
-    min-width: 34px;
-    height: 34px;
-    margin-left: 13px;
-    border-radius: 1000px;
-    border: 1px solid $color_gray;
-    text-decoration: none;
-    cursor: pointer;
-    transition: border-color $time;
+    @include inline_block();
+
+    &-cont {
+      @include flex();
+      @include image('basket-blue.svg', auto 14px, left 10px center);
+      justify-content: center;
+      align-items: center;
+      min-width: 34px;
+      height: 34px;
+      margin-left: 13px;
+      border-radius: 1000px;
+      border: 1px solid $color_gray;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color $time;
+    }
 
     &-number {
       @include block();

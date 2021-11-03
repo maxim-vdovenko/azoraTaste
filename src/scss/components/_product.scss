@@ -33,7 +33,7 @@
         margin: 0 8px;
 
         &.slick-active button {
-          background-color: #C4C4C4;
+          background-color: $color_gray;
         }
       }
 
@@ -46,6 +46,11 @@
         background-color: rgba(196, 196, 196, 0.4);
         color: transparent;
         cursor: pointer;
+        transition: background-color $time;
+
+        &:hover {
+          background-color: $color_gray;
+        }
       }
     }
 

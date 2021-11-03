@@ -1,6 +1,6 @@
 .homeReviews {
   @include block();
-  margin-top: 250px;
+  margin-top: 253px;
 
   &__row {
     @include flex();
@@ -8,7 +8,15 @@
 
   &__col {
     position: relative;
-    width: 50%;
+
+    &:nth-child(1) {
+      width: 42.5%;
+    }
+
+    &:nth-child(2) {
+      width: 57.5%;
+      padding-top: 23px;
+    }
 
     .title {
       max-width: 500px;
@@ -17,17 +25,31 @@
 
   &__box {
     @include block();
-    margin-bottom: 60px;
+    margin-bottom: 75px;
 
     &-info {
       @include block();
-      margin-bottom: 10px;
+      margin-bottom: 24px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 12px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+
+      a {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     &-description {
@@ -42,6 +64,13 @@
         font-weight: 700;
         font-size: inherit;
         line-height: inherit;
+      }
+
+      a {
+        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: none;
       }
     }
   }

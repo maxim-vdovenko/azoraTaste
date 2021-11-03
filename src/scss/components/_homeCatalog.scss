@@ -1,6 +1,6 @@
 .homeCatalog {
   @include block();
-  margin-top: 220px;
+  margin-top: 252px;
 
   &__block {
     @include block();
@@ -26,12 +26,11 @@
 
     &-cont {
       position: relative;
-      width: 50%;
     }
 
     &-type {
       @include block();
-      margin-bottom: 40px;
+      margin-bottom: 65px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: 14px;
@@ -42,29 +41,39 @@
 
     &-name {
       @include inline_block();
-      margin-bottom: 5px;
-      font-size: 60px;
-      line-height: 60px;
-      text-decoration: none;
+      max-width: 400px;
+      margin-bottom: 1px;
 
-      b, strong {
-        font-weight: 700;
-        font-size: inherit;
-        line-height: inherit;
-      }
+      a {
+        font-size: 60px;
+        line-height: 60px;
+        text-decoration: none;
 
-      b {
-        @include block();
+        b, strong {
+          font-weight: 700;
+          font-size: inherit;
+          line-height: inherit;
+        }
+  
+        b {
+          @include block();
+        }
       }
     }
 
     &-price {
       @include block();
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_blue;
     }
 
     &-description {
       @include block();
-      margin-top: 40px;
+      max-width: 470px;
+      margin-top: 47px;
 
       p {
         font-size: 30px;
@@ -72,40 +81,80 @@
       }
     }
 
+    &:nth-child(1) {
+      margin-bottom: 73px;
+    }
+    
+    &:nth-child(2) {
+      margin-bottom: 50px;
+    }
+
     &:nth-child(3n+1) {
       #{$box}-img {
-        width: 60%;
-      }
-      
-      #{$box}-cont {
-        width: 40%;
+        width: 59.5%;
+
+        a {
+          top: -3px;
+          right: -48px;
+        }
+
+        img {
+          max-width: 766px;
+        }
       }
     }
 
     &:nth-child(3n+2) {
       #{$box}-img {
-        width: 35%;
+        width: 25.5%;
+
+        a {
+          top: -68px;
+          right: -125px;
+        }
+
+        img {
+          max-width: 531px;
+        }
       }
-      
-      #{$box}-cont {
-        width: 65%;
+
+      #{$box}-type {
+        margin-bottom: 50px;
+      }
+
+      #{$box}-name {
+        margin-bottom: 12px;
       }
     }
 
     &:nth-child(3n+0) {
       #{$box}-img {
-        width: 50%;
+        width: 42.6%;
+
+        a {
+          top: -70px;
+          right: -108px;
+        }
+
+        img {
+          max-width: 523px;
+        }
       }
-      
-      #{$box}-cont {
-        width: 50%;
+
+      #{$box}-type {
+        margin-bottom: 50px;
+      }
+
+      #{$box}-name {
+        margin-bottom: 20px;
       }
     }
   }
 
   &__button {
     @include flex();
-    padding-left: 50%;
+    margin-top: -32px;
+    padding-left: 42%;
 
     .button {
       margin: 0 7px;
