@@ -1,9 +1,23 @@
 .product {
+  $product: &;
   @include block();
-  margin-top: 100px;
+  padding: 78px 0 150px 0;
 
   &__row {
     @include flex();
+
+    &--slider {
+      margin-bottom: 28px;
+
+      #{$product}__col {
+        &:nth-child(1) {
+          width: 51%;
+        }
+        &:nth-child(2) {
+          width: 49%;
+        }
+      }
+    }
   }
 
   &__col {
@@ -14,6 +28,7 @@
 
   &__slider {
     @include block();
+    margin-top: -22px;
 
     .slick-list {
       overflow: hidden;
@@ -26,7 +41,8 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 50px;
+      height: 57px;
+      padding-right: 50px;
 
       li {
         @include inline_block();
@@ -70,7 +86,7 @@
   &__top {
     @include flex();
     justify-content: space-between;
-    max-width: 600px;
+    max-width: 586px;
     margin-bottom: 40px;
   }
 
@@ -103,11 +119,11 @@
 
   &__price {
     @include flex();
-    margin-top: 50px;
+    margin-top: 43px;
 
     li {
       @include inline_block();
-      margin-right: 12px;
+      margin-right: 20px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
       font-size: 19px;
@@ -118,7 +134,7 @@
 
   &__bottom {
     @include block();
-    margin: auto 0 200px 0;
+    margin-top: 80px;
   }
 
   &__inform {
@@ -142,11 +158,93 @@
     }
   }
 
+  &__formSend {
+    @include flex();
+    margin-bottom: 41px;
+
+    &-input {
+      position: relative;
+      width: 64%;
+    }
+
+    &-button {
+      position: relative;
+      width: 36%;
+      padding-left: 7px;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+
   &__button {
     @include flex();
 
     .button, .button-like, .counter {
       margin-right: 10px;
+    }
+  }
+
+  &__text {
+    @include block();
+    margin: 125px 100px 0 0;
+
+    h4 {
+      margin-bottom: 27px;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 26px;
+    }
+
+    p {
+      margin-bottom: 17px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+    }
+
+    ul, ol {
+      @include block();
+      margin-bottom: 60px;
+
+      li {
+        margin-bottom: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: $color_text_blue;
+      }
+    }
+
+    ul li {
+      @include block();
+      padding-left: 15px;
+
+      &:before {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        content: '';
+        background-color: $color_blue;
+        transform: rotate(45deg);
+      }
+    }
+
+    ol li {
+      margin-left: 20px;
+    }
+  }
+
+  &__infoImg {
+    @include block();
+
+    img {
+      max-width: 100%;
     }
   }
 
