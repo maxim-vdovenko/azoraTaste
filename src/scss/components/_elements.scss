@@ -176,19 +176,25 @@
 }
 
 .button-delete {
-  @include image('delete-gray.svg', 12px auto, center);
+  @include image('delete-gray.svg', 17px auto, center);
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 64px;
+  height: 64px;
   border: 1px solid $color_gray;
   border-radius: 1000px;
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
   transition: border-color $time;
+
+  &--min {
+    background-size: 12px auto;
+    width: 34px;
+    height: 34px;
+  }
 
   &:hover {
     border-color: $color_blue;
@@ -314,6 +320,17 @@
     font-size: 17px;
     line-height: 23px;
     color: $color_text_blue;
+  }
+
+  &--narrow {
+    #{$counter}__minus, 
+    #{$counter}__plus {
+      width: 51px;
+    }
+
+    #{$counter}__input {
+      width: 77px;
+    }
   }
 
   &--min {
