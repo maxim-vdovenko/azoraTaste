@@ -36,6 +36,13 @@
     }
   }
 
+  &--small {
+    h1, h2 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
   &--center {
     h2 {
       text-align: center;
@@ -69,24 +76,50 @@
 }
 
 .inputField {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 64px;
-  padding: 0 23px 0 23px;
-  background-color: $color_white;
-  border: none;
-  border-radius: 1000px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 23px;
-  color: #A7A7A7;
+  $input: &;
+  @include block();
 
-  &::placeholder { 
-    color: #A7A7A7;
+  &__title {
+    @include block();
+    margin-bottom: 5px;
+    font-size: 17px;
+    line-height: 19px;
+    color: $color_text_blue;
+
+    &--centre {
+      text-align: center;
+    }
+  }
+
+  &__box {
+    @include block();
+  }
+
+  &__value {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    padding: 0 23px 0 23px;
+    background-color: $color_white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: $color_text_blue;
+
+    &::placeholder { 
+      color: #A7A7A7;
+    }
+  }
+
+  &--rounded {
+    #{$input}__value {
+      border-radius: 1000px;
+    }
   }
 }
 

@@ -1,0 +1,109 @@
+.authorization {
+  @include block();
+  padding: 42px 0 125px 0;
+
+  &__nav {
+    @include flex();
+    justify-content: center;
+    border-bottom: 1px solid $color_gray;
+    margin-top: 45px;
+
+    &-list {
+      @include flex();
+      top: 1px;
+
+      li {
+        @include flex();
+
+        a {
+          @include flex();
+          height: 51px;
+          align-items: center;
+          padding: 0 26px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 23px;
+          text-decoration: none;
+          border: 1px solid transparent;
+          color: #A7A7A7;
+          cursor: pointer;
+        }
+
+        &.active a {
+          border-color: $color_gray;
+          color: $color_text_blue;
+        }
+      }
+    }
+  }
+
+  &__block {
+    @include block();
+
+    &--entrance, 
+    &--passwordRecovery {
+      max-width: 390px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .inputField {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--entrance {
+      margin-top: 80px;
+    }
+
+    &--passwordRecovery {
+      margin-top: 60px;
+      margin-bottom: 110px;
+    }
+  }
+
+  &__button {
+    @include block(center);
+    margin-top: 30px;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  &__forgotPass {
+    @include inline_block(center);
+    margin-top: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__informText {
+    @include block();
+    max-width: 528px;
+    margin: 128px auto 88px auto;
+
+    h4 {
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+}
