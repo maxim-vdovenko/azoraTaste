@@ -1,0 +1,93 @@
+.about {
+  $about: &;
+  @include block();
+  padding: 38px 0 270px 0;
+
+  &__row {
+    @include flex();
+
+    &:nth-child(1) {
+      #{$about}__col {
+        &:nth-child(1) {
+          @include image('patterns/pattern-7.svg', 294px auto, left 0 bottom 33px);
+          padding-top: 5px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 115px;
+
+      #{$about}__col {
+        &:nth-child(1) {
+          #{$about}__text {
+            max-width: 285px;
+          }
+        }
+      }
+    }
+  }
+
+  &__col {
+    position: relative;
+
+    &:nth-child(1) {
+      width: 34%;
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+    }
+  }
+
+  &__text {
+    @include block();
+
+    h4 {
+      margin-bottom: 31px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+
+  &__socialNetworks {
+    @include flex();
+    margin-top: 95px;
+
+    li {
+      @include inline_block();
+
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+
+    a {
+      font-size: 60px;
+      line-height: 60px;
+      text-decoration: none;
+
+      &:after {
+        position: absolute;
+        bottom: 6px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        content: '';
+        background-color: $color_text_blue;
+      }
+    }
+  }
+
+  &__delimiterDesk {
+    margin-top: 140px;
+  }
+}

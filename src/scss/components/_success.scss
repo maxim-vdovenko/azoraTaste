@@ -1,0 +1,37 @@
+.success {
+  @include block();
+
+  &__block {
+    @include flex();
+    align-items: center;
+    justify-content: center;
+    min-height: 615px;
+    padding-bottom: 70px;
+  }
+
+  &__cont {
+    @include block();
+  }
+
+  &__text {
+    @include block(center);
+    margin-top: 30px;
+
+    p {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+
+  &__button {
+    @include block(center);
+    margin-top: 52px;
+
+    .button {
+      min-width: 408px;
+    }
+  }
+}

@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, p, form {
   padding-left: $side;
   padding-right: $side;
 
-  @media (max-width: $screen_md) {
+  @media (max-width: $screen_lg) {
     padding-left: $side_normal;
     padding-right: $side_normal;
   }

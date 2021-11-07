@@ -1,0 +1,26 @@
+.noPage {
+  @include block();
+  padding: 60px 0 215px;
+
+  &__block {
+    @include block();
+    @include image('patterns/no-page.svg', content, bottom);
+    padding-bottom: 590px;
+
+    @media (max-width: $width_max) {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-bottom: 470px;
+      background-size: 100% auto;      
+    }
+  }
+
+  &__button {
+    @include block(center);
+    margin-top: 25px;
+
+    .button {
+      min-width: 408px;
+    }
+  }
+}
