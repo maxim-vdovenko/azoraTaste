@@ -1,0 +1,57 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="personal">
+
+      <div class="container">
+
+        <div class="title title--center"><h2>Личный кабинет</h2></div>
+
+        <div class="personal__block">
+
+          <div class="personal__block-menu">
+            <ul class="personal__menu">
+              <li>
+                <a href="personal-order-active.html">Активные заказы</a>
+                <a href="personal-order-closed.html">Закрытые заказы</a>
+              </li>
+              <li><a href="personal-wishlist.html">Вишлист</a></li>
+              <li><a class="active" href="personal-data.html">Личные данные</a></li>
+              <li><a class="personal__output" href="#">Выход</a></li>
+            </ul>
+          </div>
+
+          <div class="personal__block-cont">
+            <div class="personal__data">
+              <span class="personal__data-name">Иван Иванов</span>
+              <div class="personal__data-info">
+                <p>Россия, Санкт-Петербург, г. Санкт-Петербург, ул. Достоевского, д. 23, кв. 23, индекс 191119</p>
+              </div>
+              <div class="personal__data-button">
+                <a class="button" href="personal-data-editing.html">Отредактировать</a>
+              </div>
+              <div class="personal__data-balance">
+                <span class="personal__data-balance-title">Баланс</span>
+                <span class="personal__data-balance-value">1 321 ₽</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

@@ -1,0 +1,177 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="personal">
+
+      <div class="container">
+
+        <div class="title title--center"><h2>Личный кабинет</h2></div>
+
+        <div class="personal__block">
+
+          <div class="personal__block-menu">
+            <ul class="personal__menu">
+              <li>
+                <a href="personal-order-active.html">Активные заказы</a>
+                <a href="personal-order-closed.html">Закрытые заказы</a>
+              </li>
+              <li><a href="personal-wishlist.html">Вишлист</a></li>
+              <li><a class="active" href="personal-data.html">Личные данные</a></li>
+              <li><a class="personal__output" href="#">Выход</a></li>
+            </ul>
+          </div>
+
+          <div class="personal__block-cont">
+
+            <form class="personal__editing">
+              <span class="personal__editing-title">Пользователь</span>
+
+              <div class="personal__editing-row personal__editing-row--user">
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Имя</span>
+                    <div class="inputField__box">
+                      <input class="inputField__value" type="text" value="Иван" />
+                    </div>
+                  </div>
+
+                </div>
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Фамилия</span>
+                    <div class="inputField__box">
+                      <input class="inputField__value" type="text" value="Иванов" />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <span class="personal__editing-title">Адрес доставки по умолчанию</span>
+
+              <div class="personal__editing-row">
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Страна</span>
+                    <div class="inputField__box">
+
+                      <select class="inputField__select">
+                        <option value="1">Россия</option>
+                        <option value="2">Турция</option>
+                        <option value="3">Португалия</option>
+                        <option value="4">Франция</option>
+                        <option value="5">Финляндия</option>
+                        <option value="6">Греция</option>
+                      </select>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Регион</span>
+                    <div class="inputField__box">
+                      <input class="inputField__value" type="text" />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="personal__editing-row">
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Населенный пункт</span>
+                    <div class="inputField__box">
+                      <input class="inputField__value" type="text" />
+                    </div>
+                  </div>
+
+                </div>
+                <div class="personal__editing-col">
+
+                  <div class="inputField">
+                    <span class="inputField__title">Улица</span>
+                    <div class="inputField__box">
+                      <input class="inputField__value" type="text" />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="personal__editing-row">
+                <div class="personal__editing-col">
+                  <div class="personal__editing-row">
+                    <div class="personal__editing-col">
+
+                      <div class="inputField">
+                        <span class="inputField__title">Дом, корпус</span>
+                        <div class="inputField__box">
+                          <input class="inputField__value" type="text" />
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="personal__editing-col">
+
+                      <div class="inputField">
+                        <span class="inputField__title">Кваритра</span>
+                        <div class="inputField__box">
+                          <input class="inputField__value" type="text" />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="personal__editing-col">
+                  <div class="personal__editing-row">
+                    <div class="personal__editing-col">
+
+                      <div class="inputField">
+                        <span class="inputField__title">Индекс</span>
+                        <div class="inputField__box">
+                          <input class="inputField__value" type="text" />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="personal__editing-button">
+                <button class="button">Сохранить изменения</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

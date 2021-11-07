@@ -1,0 +1,318 @@
+.personal {
+  @include block();
+  padding: 42px 0 270px 0;
+
+  &__block {
+    @include flex();
+    margin-top: 78px;
+
+    &-menu {
+      position: relative;
+      width: 25.4%;
+      padding-right: 25px;
+    }
+
+    &-cont {
+      position: relative;
+      flex: 1;
+    }
+  }
+
+  &__menu {
+    @include block();
+
+    li {
+      @include block();
+      border-top: 1px solid $color_gray;
+      padding: 16px 0 16px 0;
+
+      &:first-child {
+        padding: 24px 0 24px 0;
+      }
+    }
+
+    a {
+      margin: 5px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 23px;
+      text-decoration: none;
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__output {
+    @include image('output-gray.svg', auto 14px, right 0 center);
+    padding-right: 22px;
+  }
+
+  &__data {
+    @include flex();
+    flex-direction: column;
+    border: 1px solid $color_gray;
+    min-height: 443px;
+    padding: 53px 30px 26px 30px;
+
+    &-name {
+      @include block();
+      font-size: 44px;
+      line-height: 60px;
+      color: $color_text_blue;
+    }
+
+    &-info {
+      @include block();
+      margin-top: 8px;
+
+      p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    &-button {
+      @include block();
+      margin: 30px 0;
+
+      .button {
+        min-width: 391px;
+      }
+    }
+
+    &-balance {
+      @include block();
+      margin: auto 0 0 0;
+
+      &-title {
+        @include block();
+        margin-bottom: 12px;
+        font-size: 17px;
+        line-height: 19px;
+        color: $color_text_blue;
+      }
+
+      &-value {
+        @include block();
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 30px;
+        color: $color_text_blue;
+      }
+    }
+  }
+
+  &__editing {
+    @include block();
+    max-width: 822px;
+    padding-left: 15px;
+
+    &-title {
+      @include block();
+      margin: -5px 0 24px 0;
+      font-size: 30px;
+      line-height: 35px;
+      color: $color_text_blue;
+    }
+
+    &-row {
+      @include flex();
+      margin-bottom: 25px;
+
+      &--user {
+        margin-bottom: 90px;
+      }
+    }
+
+    &-col {
+      position: relative;
+      width: 50%;
+
+      &:nth-child(1) {
+        padding-right: 14px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 14px;
+      }
+    }
+
+    &-button {
+      @include block();
+      margin-top: 50px;
+
+      .button {
+        min-width: 391px;
+      }
+    }
+  }
+
+  &__order {
+    @include block();
+
+    &-head {
+      @include flex();
+      margin-bottom: 23px;
+
+      &-name {
+        position: relative;
+        font-size: 17px;
+        line-height: 19px;
+        color: $color_text_blue;
+
+        &:nth-child(1) {
+          width: 23%;
+        }
+        &:nth-child(2) {
+          width: 34%;
+        }
+        &:nth-child(3) {
+          width: 23%;
+        }
+        &:nth-child(4) {
+          width: 20%;
+        }
+      }
+    }
+
+    &-body {
+      @include flex();
+      border-top: 1px solid $color_gray;
+      padding-top: 28px;
+
+      &-box {
+        position: relative;
+
+        &:nth-child(1) {
+          width: 23%;
+        }
+        &:nth-child(2) {
+          width: 34%;
+        }
+        &:nth-child(3) {
+          width: 23%;
+        }
+        &:nth-child(4) {
+          width: 20%;
+        }
+      }
+    }
+
+    &-info {
+      @include block();
+      margin-bottom: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_blue;
+    }
+
+    &-image {
+      @include flex();
+      margin-bottom: 17px;
+    }
+
+    &-img {
+      position: relative;
+      padding-right: 10px;
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-name {
+      @include block();
+      max-width: 184px;
+
+      > a {
+        display: inline;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: $color_text_blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-number {
+      @include block();
+      margin-top: 7px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23px;
+      color: $color_text_blue;
+    }
+
+    &-price {
+      @include block();
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_blue;
+    }
+
+    &-status {
+      @include block();
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+      color: $color_text_blue;
+    }
+
+    &-tracking {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+
+      &-title {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: #A7A7A7;
+      }
+
+      &-value {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: #A7A7A7;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .catalog {
+    &__cont {
+      padding-top: 0;
+    }
+
+    &__item {
+      width: 33.33%;
+    }
+  }
+}

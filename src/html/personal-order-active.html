@@ -1,0 +1,94 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="personal">
+
+      <div class="container">
+
+        <div class="title title--center"><h2>Личный кабинет</h2></div>
+
+        <div class="personal__block">
+
+          <div class="personal__block-menu">
+            <ul class="personal__menu">
+              <li>
+                <a class="active" href="personal-order-active.html">Активные заказы</a>
+                <a href="personal-order-closed.html">Закрытые заказы</a>
+              </li>
+              <li><a href="personal-wishlist.html">Вишлист</a></li>
+              <li><a href="personal-data.html">Личные данные</a></li>
+              <li><a class="personal__output" href="#">Выход</a></li>
+            </ul>
+          </div>
+
+          <div class="personal__block-cont">
+
+            <div class="personal__order">
+
+              <div class="personal__order-head">
+                <span class="personal__order-head-name">Дата и номер заказа</span>
+                <span class="personal__order-head-name">Товары</span>
+                <span class="personal__order-head-name">Стоимость</span>
+                <span class="personal__order-head-name">Статус</span>
+              </div>
+
+              <div class="personal__order-body">
+
+                <div class="personal__order-body-box">
+                  <span class="personal__order-info">21.01.2020</span>
+                  <span class="personal__order-info">13838383</span>
+                </div>
+
+                <div class="personal__order-body-box">
+                  <div class="personal__order-image">
+                    <div class="personal__order-img"><a href="#"><img src="./img/order/img-1.png" alt="img" /></a></div>
+                    <div class="personal__order-name">
+                      <a href="#">Шоколад Moscatel Wine</a>
+                      <span class="personal__order-number">1 шт</span>
+                    </div>
+                  </div>
+                  <div class="personal__order-image">
+                    <div class="personal__order-img"><a href="#"><img src="./img/order/img-2.png" alt="img" /></a></div>
+                    <div class="personal__order-name">
+                      <a href="#">Шоколад Niepoort ruby Wine chocolate</a>
+                      <span class="personal__order-number">1 шт</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="personal__order-body-box">
+                  <span class="personal__order-price">11 260 ₽</span>
+                </div>
+
+                <div class="personal__order-body-box">
+                  <span class="personal__order-status">В пути</span>
+                  <div class="personal__order-tracking">
+                    <span class="personal__order-tracking-title">Трекинг номер</span>
+                    <span class="personal__order-tracking-value">RU227270505HE</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   
