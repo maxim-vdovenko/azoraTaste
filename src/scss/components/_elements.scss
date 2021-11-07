@@ -93,6 +93,18 @@
 
   &__box {
     @include block();
+
+    &-error {
+      position: relative;
+      display: none;
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      text-align: center;
+      font-size: 17px;
+      line-height: 23px;
+      color: #8C2C2C;
+    }
   }
 
   &__value {
@@ -111,14 +123,55 @@
     line-height: 23px;
     color: $color_text_blue;
 
+    &--centre {
+      text-align: center;
+    }
+
     &::placeholder { 
       color: #A7A7A7;
+    }
+  }
+
+  &__select {
+    @include image('arrow-down-blue.svg', 8px auto, right 22px center);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    padding: 0 23px 0 23px;
+    background-color: $color_white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: $color_text_blue;
+    cursor: pointer;
+
+    option {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
     }
   }
 
   &--rounded {
     #{$input}__value {
       border-radius: 1000px;
+    }
+  }
+
+  &.error {
+    #{$input}__box-error {
+      display: block;
+    }
+
+    #{$input}__value {
+      box-shadow: 0 0 0 1px #8C2C2C inset;
     }
   }
 }

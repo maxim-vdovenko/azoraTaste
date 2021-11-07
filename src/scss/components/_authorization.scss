@@ -60,6 +60,10 @@
       margin-top: 60px;
       margin-bottom: 110px;
     }
+
+    &--register {
+      margin-top: 141px;
+    }
   }
 
   &__button {
@@ -104,6 +108,27 @@
       font-weight: 400;
       font-size: 19px;
       line-height: 24px;
+    }
+  }
+
+  &__register {
+    @include flex();
+    margin: 78px -13px 0 -13px;
+
+    &-col {
+      position: relative;
+      width: 33.33%;
+      padding: 0 13px;
+    }
+
+    &-button {
+      @include flex();
+      justify-content: flex-end;
+      margin-top: 30px;
+
+      .button {
+        width: calc(33.33% - 15px)
+      }
     }
   }
 }

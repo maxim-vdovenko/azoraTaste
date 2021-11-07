@@ -1,0 +1,123 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="authorization">
+
+      <div class="container">
+
+        <div class="title title--center"><h2>Вход в личный кабинет</h2></div>
+
+        <div class="authorization__nav">
+          <ul class="authorization__nav-list">
+            <li><a href="entrance-2.html">Войти</a></li>
+            <li class="active"><a href="register-2.html">Зарегистрироваться</a></li>
+          </ul>
+        </div>
+
+        <form class="authorization__block authorization__block--register">
+
+          <div class="authorization__register">
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">Имя</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="text" />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">Фамилия</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="text" />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">Страна</span>
+                <div class="inputField__box">
+
+                  <select class="inputField__select">
+                    <option value="1">Россия</option>
+                    <option value="2">Турция</option>
+                    <option value="3">Португалия</option>
+                    <option value="4">Франция</option>
+                    <option value="5">Финляндия</option>
+                    <option value="6">Греция</option>
+                  </select>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="authorization__register">
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">E-mail</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="email" />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">Пароль</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="password" />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="authorization__register-col">
+
+              <div class="inputField">
+                <span class="inputField__title">Повторите пароль</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="password" />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="authorization__register-button">
+            <button class="button">Зарегистрироваться</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   
