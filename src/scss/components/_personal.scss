@@ -184,7 +184,7 @@
     &-body {
       @include flex();
       border-top: 1px solid $color_gray;
-      padding-top: 28px;
+      padding: 28px 0 16px 0;
 
       &-box {
         position: relative;
@@ -212,6 +212,11 @@
       font-size: 19px;
       line-height: 24px;
       color: $color_text_blue;
+    }
+
+    &-container {
+      position: relative;
+      display: none;
     }
 
     &-image {
@@ -314,5 +319,9 @@
     &__item {
       width: 33.33%;
     }
+  }
+
+  .deployBox {
+    margin: -8px 0 26px 0;
   }
 }

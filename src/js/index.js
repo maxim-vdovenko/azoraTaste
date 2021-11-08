@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   header.init()
   product.init()
+
+  personal.init()
 })
 
 const screen = {
