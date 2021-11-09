@@ -572,6 +572,7 @@
     height: 40px;
     border: 1px solid $color_gray;
     border-radius: 1000px;
+    transition: border-color $time;
 
     &:before {
       @include image('arrow-down-blue.svg', 8px auto, center);
@@ -582,6 +583,10 @@
       height: 100%;
       content: '';
       transition: transform 0.2s;
+    }
+
+    &:hover {
+      border-color: $color_blue;
     }
   }
 
@@ -605,6 +610,61 @@
 
     #{$deploy}__value {
       display: none;
+    }
+  }
+}
+
+.radio {
+  $radio: &;
+  $size: 28px;
+  position: relative;
+  display: block;
+  min-height: $size;
+
+  label {
+    position: relative;
+    min-height: $size;
+    padding: 3px 0 0 $size + 9px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    color: $color_text_blue;
+    cursor: pointer;
+
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      border-radius: 1000px;
+      content: '';
+    }
+    &:before {
+      border: 1px solid $color_gray;
+    }
+    &:after {
+      top: 8px;
+      left: 8px;
+      width: 14px;
+      height: 14px;
+      background-color: $color_gray;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    &:checked + label {
+      &:before {
+        border-color: $color_blue;
+      }
+      &:after {
+        background-color: $color_blue;
+      }
     }
   }
 }
@@ -653,49 +713,6 @@
 //     &:checked + label {
 //       &:after {
 //         display: block;
-//       }
-//     }
-//   }
-
-//   &--conditions {
-//     line-height: 90%;
-//     padding-left: $size + 20px;
-
-//     input {
-//       & + label {
-//         @include inline_block();
-//         font-size: 12px;
-//         line-height: inherit;
-//         padding: 0;
-
-//         &:before, &:after {
-//           left: -($size + 20px);
-//         }
-//       }
-//     }
-
-//     span, a {
-//       @include inline_block();
-//       color: #F9F9F9;
-//       font-size: 12px;
-//       line-height: inherit;
-//       text-decoration: none;
-//       letter-spacing: -0.01em;
-//     }
-
-//     a {
-//       &:hover {
-//         color: $color_text_yellow;
-//       }
-//     }
-//   }
-
-//   &--min {
-//     input {
-//       & + label {
-//         padding: 3px 0 0 $size + 20px;
-//         font-size: 12px;
-//         line-height: 130%;
 //       }
 //     }
 //   }

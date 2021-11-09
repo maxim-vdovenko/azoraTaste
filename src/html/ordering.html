@@ -1,0 +1,296 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+
+    <div class="ordering">
+
+      <div class="container">
+
+        <div class="title title--center"><h2>Оформление заказа</h2></div>
+
+        <form class="ordering__form">
+
+          <div class="ordering__whom">
+            <div class="ordering__title"><h2>Кому</h2></div>
+  
+            <div class="ordering__whom-radio">
+              <div class="radio"><input type="radio" name="radio-whom" id="whom-me" checked /><label for="whom-me">Мне</label></div>
+              <div class="radio"><input type="radio" name="radio-whom" id="whom-gift" /><label for="whom-gift">В подарок</label></div>  
+            </div>
+
+            <div class="ordering__row">
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Имя</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" value="Иван" />
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Фамилия</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" value="Иванов" />
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="ordering__where">
+            <div class="ordering__title"><h2>Куда</h2></div>
+
+            <div class="ordering__row">
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Страна</span>
+                  <div class="inputField__box">
+  
+                    <select class="inputField__select">
+                      <option value="1">Россия</option>
+                      <option value="2">Турция</option>
+                      <option value="3">Португалия</option>
+                      <option value="4">Франция</option>
+                      <option value="5">Финляндия</option>
+                      <option value="6">Греция</option>
+                    </select>
+  
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Регион</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" />
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Населенный пункт</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" />
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="ordering__row">
+
+              <div class="ordering__col">
+
+                <div class="inputField">
+                  <span class="inputField__title">Улица</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" />
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ordering__col">
+                <div class="ordering__row ordering__row--double">
+                  <div class="ordering__col">
+
+                    <div class="inputField">
+                      <span class="inputField__title">Дом, корпус</span>
+                      <div class="inputField__box">
+                        <input class="inputField__value" type="text" />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="ordering__col">
+                    
+                    <div class="inputField">
+                      <span class="inputField__title">Кваритра</span>
+                      <div class="inputField__box">
+                        <input class="inputField__value" type="text" />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="ordering__col">
+                <div class="ordering__row ordering__row--double">
+                  <div class="ordering__col">
+                    
+                    <div class="inputField">
+                      <span class="inputField__title">Индекс</span>
+                      <div class="inputField__box">
+                        <input class="inputField__value" type="text" />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="ordering__delivery">
+            <div class="ordering__title"><h2>Доставка</h2></div>
+
+            <div class="ordering__delivery-block">
+
+              <div class="ordering__delivery-box active">
+                <div class="radio"><input type="radio" name="radio-delivery" id="regular" checked /><label for="regular">Обычная</label></div>
+                <div class="ordering__delivery-cont">
+                  <p>Доставка Почтой России</p> 
+                  <p>10 — 14 рабочих дней</p>
+                  <a href="#">Подробнее</a>
+                </div>
+                <span class="ordering__delivery-price">490 ₽</span>
+              </div>
+
+              <div class="ordering__delivery-box">
+                <div class="radio"><input type="radio" name="radio-delivery" id="accelerated" /><label for="accelerated">Ускоренная</label></div>
+                <div class="ordering__delivery-cont">
+                  <p>Доставка в руки курьером DHL</p> 
+                  <p>5 — 7 рабочих дней</p>
+                  <a href="#">Подробнее</a>
+                </div>
+                <span class="ordering__delivery-price">1 290 ₽</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="ordering__goods">
+            <div class="ordering__title"><h2>Товары</h2></div>
+
+            <div class="ordering__goods-block">
+
+              <div class="ordering__goods-box">
+                <div class="ordering__goods-img"><a href="#"><img src="./img/ordering-goods/img-1.png" alt="img" /></a></div>
+                <div class="ordering__goods-cont">
+                  <div class="ordering__goods-name"><a href="#">Шоколад Moscatel Wine</a></div>
+                  <span class="ordering__goods-number">1 шт</span>
+                </div>
+                <span class="ordering__goods-price">590 ₽</span>
+              </div>
+
+              <div class="ordering__goods-box">
+                <div class="ordering__goods-img"><a href="#"><img src="./img/ordering-goods/img-2.png" alt="img" /></a></div>
+                <div class="ordering__goods-cont">
+                  <div class="ordering__goods-name"><a href="#">Шоколад Niepoort ruby Wine chocolate</a></div>
+                  <span class="ordering__goods-number">2 шт</span>
+                </div>
+                <span class="ordering__goods-price">1 590 ₽</span>
+              </div>
+
+              <div class="ordering__goods-box">
+                <div class="ordering__goods-img"><a href="#"><img src="./img/ordering-goods/img-3.png" alt="img" /></a></div>
+                <div class="ordering__goods-cont">
+                  <div class="ordering__goods-name"><a href="#">Шоколад Moscatel Wine</a></div>
+                  <span class="ordering__goods-number">1 шт</span>
+                </div>
+                <span class="ordering__goods-price">590 ₽</span>
+              </div>
+
+              <div class="ordering__goods-box">
+                <div class="ordering__goods-img"><a href="#"><img src="./img/ordering-goods/img-4.png" alt="img" /></a></div>
+                <div class="ordering__goods-cont">
+                  <div class="ordering__goods-name"><a href="#">Шоколад Niepoort ruby Wine chocolate</a></div>
+                  <span class="ordering__goods-number">4 шт</span>
+                </div>
+                <span class="ordering__goods-price">1 590 ₽</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="ordering__total">
+            <div class="ordering__total-cont">
+              <span class="ordering__total-title">Итог</span>
+              <ul class="ordering__total-value">
+                <li>4 товара</li>
+                <li>/</li>
+                <li>11 590 ₽</li>
+              </ul>
+            </div>
+            <span class="ordering__total-info">Если хотите изменить товары, вернитесь <a href="#">в корзину</a></span>
+          </div>
+
+
+          <div class="ordering__promo">
+            <div class="ordering__title"><h2>Есть подарочный сертификат или промокод?</h2></div>
+
+            <div class="ordering__promo-block">
+              <div class="ordering__promo-box">
+
+                <div class="inputField inputField--rounded">
+                  <div class="inputField__box">
+                    <input class="inputField__value" type="text" placeholder="Код" />
+                  </div>
+                </div>
+
+              </div>
+              <div class="ordering__promo-box">
+                <a class="button" href="#">проверить</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ordering__price">
+            <div class="ordering__price-title"><h2>Стоимость</h2></div>
+            <div class="ordering__price-cont">
+              <ul class="ordering__price-list">
+                <li><span>4 товара</span><span>11 590 ₽</span></li>
+                <li><span>Доставка</span><span>1 290 ₽</span></li>
+                <li><span>Код</span><span>- 540 ₽</span></li>
+                <li><b>Итог</b><b>13 590 ₽</b></li>
+              </ul>
+              <button class="button">Оплатить</button>
+            </div>
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

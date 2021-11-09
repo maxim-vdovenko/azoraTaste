@@ -1,0 +1,241 @@
+.delivery {
+  @include block();
+  padding: 38px 0 260px 0;
+  
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+  }
+
+  &:before {
+    @include image('patterns/pattern-red-1.svg', 73px auto, left 0 top 10px);
+  }
+
+  &:after {
+    @include image('patterns/pattern-8.svg', 219px auto, right 0 top 100px);
+  }
+
+  #{$cont} {
+    z-index: 1;
+  }
+
+  &__inform {
+    @include block();
+    max-width: 794px;
+    margin: 37px auto 0 auto;
+
+    p {
+      text-align: center;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__info {
+    @include block();
+    margin-top: 70px;
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+
+  &__infoTitle {
+    @include block();
+    margin: 158px 0 64px 0;
+
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 44px;
+    }
+  }
+
+  &__table {
+    $table: &;
+    @include flex();
+    flex-direction: column;
+    margin-bottom: 45px;
+
+    &-head, &-body {
+      @include flex();
+
+      span {
+        @include flex();
+        align-items: center;
+        color: $color_text_blue;
+
+        &:nth-child(1) {
+          width: 25.6%;
+        }
+        &:nth-child(2) {
+          width: 17.1%;
+        }
+        &:nth-child(3) {
+          width: 25.7%;
+        }
+        &:nth-child(4) {
+          width: 17%;
+        }
+        &:nth-child(5) {
+          width: 14.6%;
+        }
+      }
+    }
+
+    &-head {
+      min-height: 66px;
+      border-bottom: 1px solid $color_gray;
+
+      span {
+        font-size: 17px;
+        line-height: 19px;
+      }
+    }
+
+    &-body {
+      min-height: 73px;
+
+      &:nth-child(2) {
+        min-height: 77px;
+      }
+
+      span {
+        &:not(:first-child) {
+          border-bottom: 1px solid $color_gray;
+        }
+
+        &:not(#{$table}-title) {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 19px;
+          line-height: 23px;
+        }
+      }
+
+      &:last-child span {
+        border: none;
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__block {
+    $block: &;
+    @include block();
+    margin-top: 225px;
+
+    img {
+      max-width: 100%;
+    }
+
+    &-text {
+      @include block();
+
+      p {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      &--first {
+        margin: 85px 0 58px 0;
+      }
+    }
+
+    &-title {
+      @include block();
+      height: 0;
+      padding-left: 43%;
+      top: 5px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 44px;
+      }
+    }
+
+    &-list {
+      @include block();
+      max-width: 425px;
+
+      li {
+        @include block();
+
+        &:not(:last-child) {
+          margin-bottom: 17px;
+        }
+
+        padding-left: 22px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+        color: $color_text_blue;
+
+        b {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-family: inherit;
+          font-weight: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          color: inherit;
+        }
+      }
+    }
+
+    &-row {
+      @include flex();
+
+      &--first {
+        #{$block}-col {
+          position: relative;
+    
+          &:nth-child(1) {
+            width: 43%;
+
+            img {
+              margin-bottom: 174px;
+            }
+          }
+          &:nth-child(2) {
+            flex: 1;
+          }
+        }
+      }
+
+      &--last {
+        margin-top: 153px;
+
+        #{$block}-col {
+          position: relative;
+    
+          &:nth-child(1) {
+            width: 60%;
+          }
+          &:nth-child(2) {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    &-col {
+      position: relative;
+    }
+  }
+}

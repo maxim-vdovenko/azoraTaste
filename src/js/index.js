@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   let Scrollbar = window.Scrollbar;
-
   counter.init()
   addition.init()
-  
   header.init()
   product.init()
-
   personal.init()
+  ordering.init()
 })
 
 const screen = {

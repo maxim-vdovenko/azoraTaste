@@ -35,6 +35,7 @@ gulp.task('js', () => {
       src + '/js/product.js',
       src + '/js/elements.js',
       src + '/js/personal.js',
+      src + '/js/ordering.js',
     ])
   .pipe(concat('index.js'))
   .pipe(gulp.dest(dist + '/js'))
