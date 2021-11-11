@@ -75,9 +75,9 @@
 
 @mixin image($image, $cover: cover, $pos: top, $repeat: no-repeat) {
   background-image: url(#{$path_img}#{$image});
+  background-size: $cover;
   background-position: $pos;
   background-repeat: $repeat;
-  background-size: $cover;
 }
 
 @mixin placeholder($color: #000, $weight: 400) {

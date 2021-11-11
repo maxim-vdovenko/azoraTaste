@@ -1,8 +1,12 @@
 const header = {
+  logo: '.header .logo',
   navMobile: '.header__navMobile',
   menuMobile: '.header__menuMobile',
   basket: '.header__basket',
-  navBasketLink: '.header__basketNav-link'
+  navBasket: '.header__basketNav',
+  navBasketLink: '.header__basketNav-link',
+  navBasketButt: '.header__basketNav-button',
+  user: '.header__user'
 }
 
 header.init = () => {
@@ -15,64 +19,71 @@ header.init = () => {
   }
   Scrollbar.init(document.querySelector('.header__basket-cont'), options)
 
-  header.openMenu()
-  header.openBasket()
+  header.menuEvents()
+  header.basketEvents()
 }
 
-header.openBasket = () => {
-  const linkButt = document.querySelector(header.navBasketLink)
-  const basket = document.querySelector(header.basket)
-  let setTim = null;
-
-  linkButt.addEventListener('mouseenter', () => {
-    if (!basket.classList.contains('active')) {
-      clearTimeout(setTim)
-      basket.classList.add('active')
-
-      setTimeout(() => {
-        basket.classList.add('visible')
-      }, 10)
+header.basketEvents = () => {
+  $('body').on('mouseenter', header.navBasketLink, () => {
+    if (!$(header.basket).hasClass('active')) {
+      header.basketOpen()
     }
   })
 
-  basket.addEventListener('mouseleave', () => {
-    if (basket.classList.contains('active')) {
-      basket.classList.remove('visible')
-
-      setTim = setTimeout(() => {
-        basket.classList.remove('active')
-      }, 200)
+  $('body').on('mouseleave', header.basket, () => {
+    if ($(header.basket).hasClass('active')) {
+      header.basketClose()
     }
   })
-}
 
-header.openMenu = () => {
-  const body = document.querySelector('body')
-  const nav = document.querySelector(header.navMobile)
-  const menuMobile = document.querySelector(header.menuMobile)
-  let setTim = null;
-
-  nav.addEventListener('click', () => {
-
-    if (nav.classList.contains('active')) {
-      nav.classList.remove('active')
-      menuMobile.classList.remove('visible')
-
-      setTim = setTimeout(() => {
-        menuMobile.classList.remove('active')
-        body.classList.remove('activeMobileMenu')
-      }, 250)
-
+  $('body').on('click', header.navBasketButt, () => {
+    if ($(header.basket).hasClass('active')) {
+      header.basketClose()
     } else {
-      clearTimeout(setTim)
-      nav.classList.add('active')
-      menuMobile.classList.add('active')
+      header.basketOpen()
 
-      setTimeout(() => {
-        menuMobile.classList.add('visible')
-        body.classList.add('activeMobileMenu')
-        window.scrollTo(0, 0);
-      }, 1)
+      if ($(header.navMobile).hasClass('active'))
+      header.menuClose()
     }
   })
+}
+
+header.basketOpen = () => {
+  $(header.basket).addClass('active').fadeIn(200)
+  $(header.navMobile).fadeOut(200)
+}
+
+header.basketClose = () => {
+  $(header.basket).removeClass('active').fadeOut(200)
+  $(header.navMobile).fadeIn(200)
+}
+
+header.menuEvents = () => {
+  $('body').on('click', header.navMobile, e => {
+    const th = $(e.currentTarget)
+    if (th.hasClass('active'))
+    header.menuClose()
+    else 
+    header.menuOpen()
+  })
+}
+
+header.menuOpen = () => {
+  $(header.menuMobile).fadeIn(250)
+  $(header.navMobile).addClass('active')
+  $(header.logo).addClass('openMenu')
+  $(header.user).addClass('openMenu')
+  $(header.navBasket).addClass('openMenu')
+  $('body').addClass('activeMobileMenu')
+  window.scrollTo(0, 0)
+}
+
+header.menuClose = () => {
+  $(header.menuMobile).fadeOut(250, () => {
+    $('body').removeClass('activeMobileMenu')
+  })
+  $(header.navMobile).removeClass('active')
+  $(header.logo).removeClass('openMenu')
+  $(header.user).removeClass('openMenu')
+  $(header.navBasket).removeClass('openMenu')
 }

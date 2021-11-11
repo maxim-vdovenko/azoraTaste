@@ -15,7 +15,7 @@ const dist = 'dist'
 gulp.task('scss', () => {
   return gulp.src(src + '/scss/style.scss')
     .pipe(scss({outputStyle: 'expanded'}).on('error', scss.logError))
-    .pipe(cssnano()) 
+    // .pipe(cssnano()) 
     .pipe(gulp.dest(dist + '/css'))
     .pipe(browserSync.reload({stream: true}))
 })
@@ -39,7 +39,7 @@ gulp.task('js', () => {
       src + '/js/ordering.js',
     ])
   .pipe(concat('index.js'))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(gulp.dest(dist + '/js'))
   .pipe(browserSync.reload({stream: true}))
 })

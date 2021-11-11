@@ -11,6 +11,10 @@
 
 body {
   background-color: $color_fon_main;
+
+  &.activeMobileMenu {
+    overflow: hidden;
+  }
 }
 
 html, body {

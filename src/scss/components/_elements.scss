@@ -2,6 +2,12 @@
   @include image('logo.svg', content, center);
   width: 120px;
   height: 40px;
+
+  @media (max-width: $screen_lg) {
+    @include image('logo-mobile-blue.svg', content, center);
+    width: 72px;
+    height: 27px;
+  }
 }
 
 .title {
@@ -280,6 +286,12 @@
     background-size: 12px auto;
     width: 34px;
     height: 34px;
+
+    @media (max-width: $screen_lg) {
+      background-size: 8px auto;
+      width: 22px;
+      height: 22px;
+    }
   }
 
   &:hover {
@@ -422,14 +434,54 @@
   &--min {
     height: 35px;
 
+    @media (max-width: $screen_lg) {
+      height: 23px;
+    }
+
     #{$counter}__minus, 
     #{$counter}__plus {
       width: 30px;
+
+      @media (max-width: $screen_lg) {
+        width: 20px;
+      }
+    }
+
+    #{$counter}__minus {
+      @media (max-width: $screen_lg) {
+        &:before {
+          width: 5px;
+          height: 1px;
+          margin: -1px 0 0 -2px;
+        }
+      }
+    }
+
+    #{$counter}__plus {
+      @media (max-width: $screen_lg) {
+        &:before {
+          width: 5px;
+          height: 1px;
+          margin: -1px 0 0 -4px;
+        }
+        &:after {
+          width: 1px;
+          height: 5px;
+          margin: -3px 0 0 -2px;
+        }
+      }
     }
 
     #{$counter}__input {
       width: 47px;
       font-size: 13px;
+
+      @media (max-width: $screen_lg) {
+        width: 28px;
+        font-weight: 400;
+        font-size: 11px;
+        padding: 1px 2px 0 2px;
+      }
     }
   }
 }

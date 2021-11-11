@@ -6,10 +6,50 @@
     max-width: 1600px;
   }
 
+  .logo {
+    @media (max-width: $screen_lg) {
+      top: 14px;
+      background-image: none;
+      z-index: 1001;
+
+      &:before, &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        transition: opacity $time;
+      }
+      &:before {
+        @include image('logo-mobile-blue.svg', content, center);
+        opacity: 1;
+      }
+      &:after {
+        @include image('logo-mobile-white.svg', content, center);
+        opacity: 0;
+      }
+
+      &.openMenu {
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   &__row {
     @include flex();
     justify-content: space-between;
     min-height: $header_height;
+
+    @media (max-width: $screen_lg) {
+      justify-content: flex-end;
+      min-height: $header_height_mobile;
+    }
   }
 
   &__col {
@@ -17,15 +57,40 @@
 
     &:nth-child(1) {
       padding-top: 60px;
+
+      @media (max-width: $screen_lg) {
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding-top: 0;
+      }
     }
 
     &:nth-child(2) {
       padding-top: 72px;
       padding-right: 10px;
+
+      @media (max-width: $screen_lg) {
+        display: none;
+      }
     }
 
     &:nth-child(3) {
       padding-top: 61px;
+
+      @media (max-width: $screen_lg) {
+        position: absolute;
+        justify-content: flex-end;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding-top: 0;
+        z-index: 1001;
+      }
     }
   }
 
@@ -63,6 +128,7 @@
   }
 
   &__user {
+    $user: &;
     @include flex();
     justify-content: center;
     align-items: center;
@@ -70,6 +136,8 @@
     height: 34px;
     border-radius: 1000px;
     border: 1px solid $color_gray;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 17px;
     line-height: 23px;
     color: $color_text_blue;
@@ -77,16 +145,59 @@
     cursor: pointer;
     transition: border-color $time;
 
+    @media (max-width: $screen_lg) {
+      border-color: $color_blue;
+      width: 22px;
+      height: 22px;
+      top: 18px;
+    }
+
     &--icon {
-      @include image('user-blue.svg', auto 14px, center);
+      &:before {
+        @include image('user-blue.svg', auto 14px, center);
+        opacity: 1;
+      }
+      &:after {
+        @include image('user-white.svg', auto 14px, center);
+        opacity: 0;
+      }
+      &:before, &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        transition: opacity $time;
+
+        @media (max-width: $screen_lg) {
+          background-size: 8px auto;
+        }
+      }
     }
 
     &:hover {
       border-color: $color_blue;
     }
+
+    &.openMenu {
+      @media (max-width: $screen_lg) {
+        border-color: $color_white;
+
+        &#{$user}--icon {
+          &:before {
+            opacity: 0;
+          }
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   &__basketNav {
+    $nav: &;
     @include inline_block();
 
     &-cont {
@@ -102,6 +213,15 @@
       text-decoration: none;
       cursor: pointer;
       transition: border-color $time;
+
+      @media (max-width: $screen_lg) {
+        background-image: none;
+        border-color: $color_blue;
+        min-width: 22px;
+        height: 22px;
+        top: 18px;
+        margin-left: 4px;
+      }
     }
 
     &-number {
@@ -112,6 +232,13 @@
       font-size: 17px;
       line-height: 23px;
       color: $color_text_blue;
+      transition: color $time;
+
+      @media (max-width: $screen_lg) {
+        padding: 0 3px;
+        font-size: 12px;
+        line-height: 23px;
+      }
     }
 
     &-link {
@@ -146,6 +273,21 @@
     &:hover {
       border-color: $color_blue;
     }
+
+    &.active {
+      border-color: $color_blue;
+    }
+
+    &.openMenu {
+      @media (max-width: $screen_lg) {
+        #{$nav}-cont {
+          border-color: $color_white;
+        }
+        #{$nav}-number {
+          color: $color_text_white;
+        }
+      }
+    }
   }
 
   &__basket {
@@ -157,21 +299,24 @@
     padding: 98px 0 84px 0;
     background-color: $color_white;
     border: 1px solid $color_gray;
-    transition: all 0.2s;
-    opacity: 0;
 
-    &.active {
-      display: block;
-    }
-  
-    &.visible {
-      opacity: 1;
+    @media (max-width: $screen_lg) {
+      top: 8px;
+      left: -7px;
+      right: -7px;
+      padding: 60px 0 59px 0;
+      width: auto;
     }
 
     &-cont {
       @include block();
       height: 410px;
       padding: 0 $side_header_basket + 18px 0 $side_header_basket;
+
+      @media (max-width: $screen_lg) {
+        height: 282px;
+        padding: 0 32px 0 8px;
+      }
     }
 
     &-box {
@@ -179,17 +324,32 @@
       border-top: 1px solid $color_gray;
       padding: 20px 0 24px 0;
 
+      @media (max-width: $screen_lg) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
       &-col {
         @include flex();
         flex-direction: column;
         align-items: flex-start;
 
         &:nth-child(1) {
-          min-width: 100px;
+          width: 100px;
+
+          @media (max-width: $screen_lg) {
+            width: 65px;
+          }
         }
 
         &:nth-child(2) {
           flex: 1;
+          padding-right: 90px;
+
+          @media (max-width: $screen_lg) {
+            padding-left: 10px;
+            padding-right: 70px;
+          }
         }
 
         .button-delete {
@@ -215,6 +375,12 @@
         font-size: 22px;
         line-height: 22px;
         text-decoration: none;
+
+        @media (max-width: $screen_lg) {
+          font-size: 15px;
+          line-height: 17px;
+          margin: 0 0 4px 0;
+        }
       }
 
       &-price {
@@ -224,6 +390,12 @@
         font-weight: 400;
         font-size: 17px;
         line-height: 23px;
+
+        @media (max-width: $screen_lg) {
+          font-size: 11px;
+          line-height: 13px;
+          margin-top: 12px;
+        }
       }
     }
 
@@ -239,12 +411,21 @@
       padding: 0 $side_header_basket - 2px;
       background-color: $color_blue;
 
+      @media (max-width: $screen_lg) {
+        min-height: 59px;
+        padding: 0 8px;
+      }
+
       &-col {
         @include flex();
         align-items: center;
 
         .button-inBasket {
           display: none;
+
+          @media (max-width: $screen_lg) {
+            display: inline-flex;
+          }
         }
       }
 
@@ -253,6 +434,11 @@
         font-size: 22px;
         line-height: 30px;
         color: $color_text_white;
+
+        @media (max-width: $screen_lg) {
+          font-size: 15px;
+          line-height: 17px;
+        }
       }
 
       &-totalVal {
@@ -262,6 +448,12 @@
         font-size: 17px;
         line-height: 30px;
         color: $color_text_white;
+
+        @media (max-width: $screen_lg) {
+          margin-left: 35px;
+          font-size: 11px;
+          line-height: 13px;
+        }
       }
     }
 
@@ -336,19 +528,9 @@
     height: 100%;
     background-color: $color_blue;
     z-index: 1000;
-    transition: all 0.25s;
-    opacity: 0;
 
-    &.active {
-      @media (max-width: $screen_lg) {
-        display: block;
-      }
-    }
-  
-    &.visible {
-      @media (max-width: $screen_lg) {
-        opacity: 1;
-      }
+    @media (min-width: $screen_lg) {
+      display: none !important;
     }
 
     &-cont {

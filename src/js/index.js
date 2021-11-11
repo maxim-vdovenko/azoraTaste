@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const screen = {
-  xl: 1650,
-  lg: 1440,
-  md: 1140,
-  sm: 768,
+  xl: 1180,
+  lg: 890,
+  md: 768,
+  sm: 640,
   xs: 500
 }
