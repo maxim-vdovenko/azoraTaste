@@ -17,16 +17,99 @@
           <span class="cert__block-info">Сертификат действует 1 год, подарок при оплате сертификатом</span>
         </div>
 
+
+
+
         <div class="cert__form">
           <div class="cert__title"><span>Подарить сертификат</span></div>
           <form class="cert__form-cont">
 
             <div class="cert__step">
               <span class="cert__step-name">Шаг 1</span>
+
+              <div class="denomination">
+                <span class="denomination__title">Номинал</span>
+                <div class="denomination__block">
+                  <div class="denomination__box"><input type="radio" name="den" id="den1" /><label for="den1">1 000 ₽</label></div>
+                  <div class="denomination__box"><input type="radio" name="den" id="den2" /><label for="den2">2 000 ₽</label></div>
+                  <div class="denomination__box"><input type="radio" name="den" id="den3" /><label for="den3">5 000 ₽</label></div>
+                  <div class="denomination__box"><input type="radio" name="den" id="den4" /><label for="den4">10 000 ₽</label></div>
+                  <div class="denomination__box"><input type="radio" name="den" id="den5" /><label for="den5">15 000 ₽</label></div>
+                </div>
+              </div>
+
+              <div class="inputField inputField--sum">
+                <span class="inputField__title">Или введите свою сумму</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="text" />
+                  <span class="inputField__box-currency">₽</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert__step">
+              <span class="cert__step-name">Шаг 2</span>
+
+              <div class="colors">
+                <span class="colors__title">Цвет сертификата</span>
+                <div class="colors__block">
+                  <div class="colors__box colors__box--orange"><input type="radio" name="color" id="color1" /><label for="color1"></label></div>
+                  <div class="colors__box colors__box--blue"><input type="radio" name="color" id="color2" /><label for="color2"></label></div>
+                  <div class="colors__box colors__box--red"><input type="radio" name="color" id="color3" /><label for="color3"></label></div>
+                  <div class="colors__box colors__box--blueLight"><input type="radio" name="color" id="color4" /><label for="color4"></label></div>
+                  <div class="colors__box colors__box--transparent"><input type="radio" name="color" id="color5" /><label for="color5"></label></div>
+                  <div class="colors__box colors__box--white"><input type="radio" name="color" id="color6" /><label for="color6"></label></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert__step">
+              <span class="cert__step-name">Шаг 3</span>
+              
+              <div class="inputField">
+                <span class="inputField__title">Имя получателя</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="text" />
+                </div>
+              </div>
+
+              <div class="inputField">
+                <span class="inputField__title">Пожелания получателю</span>
+                <div class="inputField__box">
+                  <textarea class="inputField__template"></textarea>
+                  <span class="inputField__box-templateInfo">Мах 200 символов</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert__step">
+              <span class="cert__step-name">Шаг 4</span>
+              
+              <div class="inputField">
+                <span class="inputField__title">E-mail, куда отправить сертификат</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="email" />
+                </div>
+              </div>
+
+              <div class="inputField">
+                <span class="inputField__title">Повторите e-mail</span>
+                <div class="inputField__box">
+                  <input class="inputField__value" type="email" />
+                </div>
+              </div>
+            </div>
+
+            <div class="cert__button">
+              <button class="button">ОПЛАТИТЬ</button>
             </div>
 
           </form> 
         </div>
+
+
+
+
        
         <div class="cert__instruction">
           <div class="cert__title"><span>Как использовать сертификат</span></div>
