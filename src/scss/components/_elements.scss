@@ -18,6 +18,11 @@
     font-size: 60px;
     line-height: 60px;
 
+    @media (max-width: $screen_lg) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
     b {
       text-align: inherit;
       font-weight: 700;
@@ -50,7 +55,7 @@
   }
 
   &--center {
-    h2 {
+    h1, h2 {
       text-align: center;
     }
   }
@@ -202,6 +207,18 @@
   letter-spacing: 0.05em;
   color: $color_text_blue;
   transition: border-color $time;
+
+  @media (max-width: $screen_lg) {
+    height: 50px;
+    padding: 3px 30px 0 30px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.07em;
+  }
+
+  @media (max-width: $screen_sm) {
+    width: 100%;
+  }
 
   &:hover {
     border-color: $color_blue;

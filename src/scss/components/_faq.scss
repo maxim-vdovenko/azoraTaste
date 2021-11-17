@@ -1,0 +1,64 @@
+.faq {
+  $about: &;
+  @include block();
+  padding: 38px 0 295px 0;
+
+  &__row {
+    @include flex();
+  }
+
+  &__col {
+    position: relative;
+
+    &:nth-child(1) {
+      @include image('patterns/pattern-9.svg', 298px auto, left 0 bottom 20px);
+      width: 34%;
+      min-height: 800px;
+      padding-top: 5px;
+    }
+
+    &:nth-child(2) {
+      flex: 1;
+    }
+  }
+
+  &__block {
+    @include block();
+  }
+
+  &__box {
+    @include block();
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color_gray;
+      padding-bottom: 22px;
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      @include block();
+      margin-bottom: 15px;
+
+      h3, a {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &-text {
+      @include block();
+
+      p {
+        margin-bottom: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 24px;
+      }
+    }
+  }
+}
