@@ -2,19 +2,40 @@
   @include block();
   padding: 42px 0 270px 0;
 
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 140px 0;
+  }
+
   &__block {
     @include flex();
     margin-top: 78px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      margin-top: 27px;
+    }
 
     &-menu {
       position: relative;
       width: 25.4%;
       padding-right: 25px;
+
+      @media (max-width: $screen_lg) {
+        display: block;
+        width: auto;
+        padding-right: 0;
+      }
     }
 
     &-cont {
       position: relative;
       flex: 1;
+
+      @media (max-width: $screen_lg) {
+        display: block;
+        flex: auto;
+        margin-top: 60px;
+      }
     }
   }
 
@@ -24,10 +45,21 @@
     li {
       @include block();
       border-top: 1px solid $color_gray;
-      padding: 16px 0 16px 0;
+      padding: 16px 0;
+
+      @media (max-width: $screen_lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 9px 0;
+      }
 
       &:first-child {
-        padding: 24px 0 24px 0;
+        padding: 24px 0;
+
+        @media (max-width: $screen_lg) {
+          padding: 11px 0;
+        }
       }
     }
 
@@ -38,6 +70,12 @@
       font-size: 19px;
       line-height: 23px;
       text-decoration: none;
+
+      @media (max-width: $screen_lg) {
+        font-size: 11px;
+        line-height: 11px;
+        margin: 3px 0;
+      }
 
       &.active {
         font-weight: 700;
@@ -57,28 +95,54 @@
     min-height: 443px;
     padding: 53px 30px 26px 30px;
 
+    @media (max-width: $screen_lg) {
+      display: block;
+      min-height: 0;
+      padding: 0;
+      border: none;
+    }
+
     &-name {
       @include block();
       font-size: 44px;
       line-height: 60px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        font-size: 19px;
+        line-height: 23px;
+      }
     }
 
     &-info {
       @include block();
       margin-top: 8px;
 
+      @media (max-width: $screen_lg) {
+        margin-top: 12px;
+        max-width: 260px;
+      }
+
       p {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 30px;
         line-height: 40px;
+
+        @media (max-width: $screen_lg) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
     }
 
     &-button {
       @include block();
       margin: 30px 0;
+
+      @media (max-width: $screen_lg) {
+        margin: 20px 0 0 0;
+      }
 
       .button {
         min-width: 391px;
@@ -89,12 +153,21 @@
       @include block();
       margin: auto 0 0 0;
 
+      @media (max-width: $screen_lg) {
+        margin: 30px 0 0 0;
+      }
+
       &-title {
         @include block();
         margin-bottom: 12px;
         font-size: 17px;
         line-height: 19px;
         color: $color_text_blue;
+
+        @media (max-width: $screen_lg) {
+          margin-bottom: 3px;
+          font-size: 15px;
+        }
       }
 
       &-value {
@@ -104,14 +177,26 @@
         font-size: 30px;
         line-height: 30px;
         color: $color_text_blue;
+
+        @media (max-width: $screen_lg) {
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
     }
   }
 
   &__editing {
+    $editing: &;
     @include block();
     max-width: 822px;
     padding-left: 15px;
+
+    @media (max-width: $screen_lg) {
+      max-width: none;
+      margin: 0 auto;
+      padding-left: 0;
+    }
 
     &-title {
       @include block();
@@ -119,6 +204,12 @@
       font-size: 30px;
       line-height: 35px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        margin: 0 0 10px 0;
+        font-size: 19px;
+        line-height: 23px;
+      }
     }
 
     &-row {
@@ -128,18 +219,51 @@
       &--user {
         margin-bottom: 90px;
       }
+
+      @media (max-width: $screen_lg) {
+        // flex-wrap: wrap;
+
+        &:nth-child(4) {
+          // @include b();
+        }
+      }
     }
 
     &-col {
       position: relative;
       width: 50%;
 
+      @media (max-width: $screen_lg) {
+    
+        // width: 100%;
+
+        // #{$editing}-col {
+        //   width: 50%;
+        // }
+      }
+
       &:nth-child(1) {
         padding-right: 14px;
+
+        // @media (max-width: $screen_lg) {
+        //   padding-right: 0;
+
+        //   #{$editing}-col {
+        //     padding-right: 14px;
+        //   }
+        // }
       }
 
       &:nth-child(2) {
         padding-left: 14px;
+
+        // @media (max-width: $screen_lg) {
+        //   padding-left: 0;
+
+        //   #{$editing}-col {
+        //     padding-left: 14px;
+        //   }
+        // }
       }
     }
 

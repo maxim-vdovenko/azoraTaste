@@ -339,9 +339,9 @@
   }
 
   @media (max-width: $screen_xs) {
-    width: 100%;
-    min-width: 0;
-    max-width: none;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
   }
 
   &:hover {
@@ -423,6 +423,12 @@
   cursor: pointer;
   transition: border-color $time;
 
+  @media (max-width: $screen_lg) {
+    background-size: 8px auto;
+    width: 22px;
+    height: 22px;
+  }
+
   &--min {
     background-size: 12px auto;
     width: 34px;
@@ -501,6 +507,10 @@
   border: 1px solid $color_gray;
   border-radius: 1000px;
 
+  @media (max-width: $screen_lg) {
+    height: 23px;
+  }
+
   &__minus, &__plus {
     position: relative;
     width: 56px;
@@ -565,10 +575,46 @@
     #{$counter}__minus, 
     #{$counter}__plus {
       width: 51px;
+
+      @media (max-width: $screen_lg) {
+        width: 20px;
+      }
+    }
+
+    #{$counter}__minus {
+      @media (max-width: $screen_lg) {
+        &:before {
+          width: 5px;
+          height: 1px;
+          margin: -1px 0 0 -2px;
+        }
+      }
+    } 
+
+    #{$counter}__plus {
+      @media (max-width: $screen_lg) {
+        &:before {
+          width: 5px;
+          height: 1px;
+          margin: -1px 0 0 -4px;
+        }
+        &:after {
+          width: 1px;
+          height: 5px;
+          margin: -3px 0 0 -2px;
+        }
+      }
     }
 
     #{$counter}__input {
       width: 77px;
+
+      @media (max-width: $screen_lg) {
+        width: 28px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 11px;
+      }
     }
   }
 

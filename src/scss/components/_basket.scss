@@ -2,21 +2,39 @@
   @include block();
   padding: 42px 0 208px 0;
   
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 140px 0;
+  }
+
   .counter {
     position: absolute;
     top: 40px;
     right: 103px;
+
+    @media (max-width: $screen_lg) {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
   }
 
   .button-delete {
     position: absolute;
     top: 40px;
     right: 0;
+
+    @media (max-width: $screen_lg) {
+      top: 12px;
+    }
   }
 
   &__block {
     @include block();
     margin-top: 40px;
+
+    @media (max-width: $screen_lg) {
+      margin-top: 16px;
+    }
   }
 
   &__box {
@@ -24,11 +42,20 @@
     min-height: 325px;
     border-top: 1px solid $color_gray;
 
+    @media (max-width: $screen_lg) {
+      min-height: auto;
+    }
+
     &-img {
       position: relative;
       width: 100%;
       max-width: 209px;
       padding-top: 40px;
+
+      @media (max-width: $screen_lg) {
+        max-width: 75px;
+        padding: 10px 10px 0 0;
+      }
 
       a {
         text-decoration: none;
@@ -42,7 +69,11 @@
     &-cont {
       position: relative;
       flex: 1;
-      padding: 52px 0 35px 0;
+      padding: 52px 350px 35px 0;
+
+      @media (max-width: $screen_lg) {
+        padding: 14px 50px 18px 0;
+      }
     }
 
     &-type {
@@ -54,17 +85,33 @@
       line-height: 12px;
       text-transform: uppercase;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 8px;
+        font-size: 11px;
+        line-height: 11px;
+      }
     }
 
     &-name {
       @include inline_block();
       margin-bottom: 38px;
 
+      @media (max-width: $screen_lg) {
+        display: block;
+        margin-bottom: 5px;
+      }
+
       a {
         font-weight: 700;
         font-size: 30px;
         line-height: 34px;
         text-decoration: none;
+
+        @media (max-width: $screen_lg) {
+          font-size: 15px;
+          line-height: 17px;
+        }
       }
     }
 
@@ -75,6 +122,12 @@
       font-size: 24px;
       line-height: 24px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 9px;
+        font-size: 11px;
+        line-height: 13px;
+      }
     }
   }
 
@@ -86,6 +139,11 @@
     min-height: 105px;
     margin-top: 24px;
 
+    @media (max-width: $screen_lg) {
+      min-height: 38px;
+      margin-top: 0;
+    }
+
     &-col {
       position: relative;
     }
@@ -96,6 +154,11 @@
       font-size: 44px;
       line-height: 54px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        font-size: 15px;
+        line-height: 17px;
+      }
     }
 
     &-price {
@@ -109,8 +172,17 @@
         line-height: 24px;
         color: $color_text_blue;
 
+        @media (max-width: $screen_lg) {
+          font-size: 11px;
+          line-height: 13px;
+        }
+
         &:not(:first-child) {
           margin-left: 25px;
+
+          @media (max-width: $screen_lg) {
+            margin-left: 8px;
+          }
         }
       }
     }
@@ -122,6 +194,10 @@
     align-items: center;
     margin-top: 80px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 22px;
+    }
+
     .button {
       padding-left: 65px;
       padding-right: 65px;
@@ -132,6 +208,11 @@
       max-width: 480px;
       margin: 27px auto 0 auto;
 
+      @media (max-width: $screen_lg) {
+        max-width: 280px;
+        margin-top: 12px;
+      }
+
       p {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -139,6 +220,11 @@
         line-height: 23px;
         text-align: center;
         color: $color_text_blue;
+
+        @media (max-width: $screen_lg) {
+          font-size: 11px;
+          line-height: 13px;
+        }
       }
     }
   }
