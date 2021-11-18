@@ -268,8 +268,10 @@
     letter-spacing: 0.07em;
   }
 
-  @media (max-width: $screen_sm) {
+  @media (max-width: $screen_xs) {
     width: 100%;
+    min-width: 0;
+    max-width: none;
   }
 
   &:hover {

@@ -3,8 +3,16 @@
   @include block();
   padding: 38px 0 295px 0;
 
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 140px 0;
+  }
+
   &__row {
     @include flex();
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
   }
 
   &__col {
@@ -15,33 +23,71 @@
       width: 34%;
       min-height: 800px;
       padding-top: 5px;
+
+      @media (max-width: $width_max) {
+        background-size: 200px auto;
+      }
+
+      @media (max-width: $screen_lg) {
+        display: block;
+        background-image: none;
+        width: auto;
+        min-height: auto;
+        padding-top: 0;
+      }
     }
 
     &:nth-child(2) {
       flex: 1;
+
+      @media (max-width: $screen_lg) {
+        flex: auto;
+      }
     }
   }
 
   &__block {
     @include block();
+
+    @media (max-width: $screen_lg) {
+      margin-top: 36px;
+    }
   }
 
   &__box {
     @include block();
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $color_gray;
-      padding-bottom: 22px;
-      margin-bottom: 30px;
+    @media (min-width: $screen_lg + 1px) {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color_gray;
+        padding-bottom: 22px;
+        margin-bottom: 30px;
+      }
     }
 
+    @media (max-width: $screen_lg) {
+      border-top: 1px solid $color_gray;
+      padding-top: 28px;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+    
     &-title {
       @include block();
       margin-bottom: 15px;
 
+      @media (max-width: $screen_lg) {
+        margin-bottom: 7px;
+      }
+
       h3, a {
         font-size: 30px;
         line-height: 36px;
+
+        @media (max-width: $screen_lg) {
+          font-size: 19px;
+          line-height: 23px;
+        }
       }
 
       a {
@@ -58,6 +104,12 @@
         font-weight: 400;
         font-size: 19px;
         line-height: 24px;
+
+        @media (max-width: $screen_lg) {
+          font-size: 11px;
+          line-height: 15px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

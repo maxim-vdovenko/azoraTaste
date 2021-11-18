@@ -2,6 +2,10 @@
   @include block();
   padding: 60px 0 215px;
 
+  @media (max-width: $screen_lg) {
+    padding: 100px 0 180px;
+  }
+
   &__block {
     @include block();
     @include image('patterns/no-page.svg', content, bottom);
@@ -13,14 +17,27 @@
       padding-bottom: 470px;
       background-size: 100% auto;      
     }
+
+    @media (max-width: $screen_lg) {
+      background-image: none;
+      padding-bottom: 0;
+    }
   }
 
   &__button {
     @include block(center);
     margin-top: 25px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 20px;
+    }
+
     .button {
       min-width: 408px;
+
+      @media (max-width: $screen_lg) {
+        min-width: 290px;
+      }
     }
   }
 }

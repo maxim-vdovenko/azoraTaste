@@ -1,12 +1,23 @@
 .success {
   @include block();
 
+  @media (max-width: $screen_lg) {
+    padding: 100px 0 180px;
+  }
+
   &__block {
     @include flex();
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     min-height: 615px;
     padding-bottom: 70px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      min-height: auto;
+      padding-bottom: 0;
+    }
   }
 
   &__cont {
@@ -17,12 +28,21 @@
     @include block(center);
     margin-top: 30px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 16px;
+    }
+
     p {
       text-align: center;
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
       font-size: 19px;
       line-height: 24px;
+
+      @media (max-width: $screen_lg) {
+        font-size: 11px;
+        line-height: 13px;
+      }
     }
   }
 
@@ -30,8 +50,16 @@
     @include block(center);
     margin-top: 52px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 35px;
+    }
+
     .button {
       min-width: 408px;
+
+      @media (max-width: $screen_lg) {
+        min-width: 290px;
+      }
     }
   }
 }
