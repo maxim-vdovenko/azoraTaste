@@ -65,6 +65,10 @@
   @include block();
   @include image('patterns/pattern-blue-1.svg', auto 100%, center);
   height: 46px;
+
+  @media (max-width: $screen_lg) {
+    height: 32px;
+  }
   
   &:before, &:after {
     position: absolute;
@@ -77,12 +81,20 @@
 
   &:before {
     left: 0;
-    right: calc(50% + 52px);    
+    right: calc(50% + 52px);  
+    
+    @media (max-width: $screen_lg) {
+      right: calc(50% + 25px);  
+    }
   }
 
   &:after {
     right: 0;
-    left: calc(50% + 52px);  
+    left: calc(50% + 52px); 
+    
+    @media (max-width: $screen_lg) {
+      left: calc(50% + 25px);  
+    }
   }
 }
 
