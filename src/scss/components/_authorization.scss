@@ -2,11 +2,30 @@
   @include block();
   padding: 42px 0 125px 0;
 
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 120px 0;
+  }
+
+  .title--small {
+    @media (max-width: $screen_lg) {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+
   &__nav {
     @include flex();
     justify-content: center;
     border-bottom: 1px solid $color_gray;
     margin-top: 45px;
+
+    @media (max-width: $screen_lg) {
+      margin-top: 20px;
+      margin-left: -$side_normal;
+      margin-right: -$side_normal;
+      padding: 0 $side_normal;
+      justify-content: flex-start;
+    }
 
     &-list {
       @include flex();
@@ -28,6 +47,13 @@
           border: 1px solid transparent;
           color: #A7A7A7;
           cursor: pointer;
+
+          @media (max-width: $screen_lg) {
+            height: 32px;
+            padding: 0 15px;
+            font-weight: 700;
+            font-size: 11px;
+          }
         }
 
         &.active a {
@@ -49,26 +75,51 @@
 
       .inputField {
         margin-bottom: 12px;
+
+        @media (max-width: $screen_lg) {
+          margin-bottom: 10px;
+        }
       }
     }
 
     &--entrance {
       margin-top: 80px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 46px;
+      }
     }
 
     &--passwordRecovery {
       margin-top: 60px;
       margin-bottom: 110px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 46px;
+        margin-bottom: 0;
+      }
     }
 
     &--register {
       margin-top: 141px;
+    }
+
+    @media (max-width: $screen_lg) {
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 42px;
     }
   }
 
   &__button {
     @include block(center);
     margin-top: 30px;
+
+    @media (max-width: $screen_lg) {
+      margin-top: 20px;
+      text-align: left;
+    }
 
     .button {
       width: 100%;
@@ -83,6 +134,12 @@
     font-size: 17px;
     line-height: 23px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 42px;
+      font-size: 11px;
+      line-height: 13px;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -93,12 +150,22 @@
     max-width: 528px;
     margin: 128px auto 88px auto;
 
+    @media (max-width: $screen_lg) {
+      max-width: 360px;
+      margin: 60px auto 0 auto;
+    }
+
     h4 {
       margin-bottom: 15px;
       text-align: center;
       font-weight: 700;
       font-size: 30px;
       line-height: 34px;
+
+      @media (max-width: $screen_lg) {
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
 
     p {
@@ -108,6 +175,12 @@
       font-weight: 400;
       font-size: 19px;
       line-height: 24px;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -115,10 +188,22 @@
     @include flex();
     margin: 78px -13px 0 -13px;
 
+    @media (max-width: $screen_lg) {
+      display: block;
+      margin: 0;
+    }
+
     &-col {
       position: relative;
       width: 33.33%;
       padding: 0 13px;
+
+      @media (max-width: $screen_lg) {
+        display: block;
+        width: auto;
+        padding: 0;
+        margin-bottom: 10px;
+      }
     }
 
     &-button {
@@ -126,8 +211,16 @@
       justify-content: flex-end;
       margin-top: 30px;
 
+      @media (max-width: $screen_lg) {
+        margin-top: 20px;
+      }
+
       .button {
-        width: calc(33.33% - 15px)
+        width: calc(33.33% - 15px);
+
+        @media (max-width: $screen_lg) {
+          width: 100%;
+        }
       }
     }
   }
