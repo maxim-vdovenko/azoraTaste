@@ -3,6 +3,10 @@
   @include block();
   padding: 38px 0 250px 0;
 
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 170px 0;
+  }
+
   &:before, &:after {
     position: absolute;
     top: 0;
@@ -10,14 +14,26 @@
     width: 100%;
     height: 100%;
     content: '';
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
   }
 
   &:before {
     @include image('patterns/pattern-10.svg', 218px auto, left 0 top 144px);
+
+    @media (max-width: $width_max) {
+      background-size: 140px auto;
+    }
   }
 
   &:after {
     @include image('patterns/pattern-yellow-1.svg', 73px auto, right 0 top 430px);
+
+    @media (max-width: $width_max) {
+      background-size: 60px auto;
+    }
   }
 
   #{$cont} {
@@ -32,6 +48,12 @@
       font-size: 44px;
       line-height: 44px;
       color: $color_text_blue;
+      text-align: center;
+
+      @media (max-width: $screen_lg) {
+        font-size: 30px;
+        line-height: 30px;
+      }
     }
   }
 
@@ -43,10 +65,19 @@
       max-width: 800px;
       margin: 37px auto 0 auto;
 
+      @media (max-width: $screen_lg) {
+        margin-top: 33px;
+      }
+
       p {
         font-size: 30px;
         line-height: 36px;
         text-align: center;
+
+        @media (max-width: $screen_lg) {
+          font-size: 19px;
+          line-height: 23px;
+        }
       }
     }
 
@@ -57,6 +88,11 @@
       font-weight: 400;
       font-size: 19px;
       line-height: 23px;
+
+      @media (max-width: $screen_lg) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -65,15 +101,34 @@
     max-width: 600px;
     margin: 200px auto 0 auto;
 
+    @media (max-width: $screen_lg) {
+      max-width: 480px;
+      margin-top: 100px;
+    }
+
     &-cont {
       @include block();
       margin-top: 65px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 42px;
+      }
     }
   }
 
   &__step {
     @include block();
     margin-bottom: 48px;
+
+    @media (max-width: $screen_lg) {
+      margin-bottom: 30px;
+    }
+
+    &:first-child {
+      @media (max-width: $screen_lg) {
+        margin-bottom: 36px;
+      }
+    }
 
     &-name {
       @include block();
@@ -83,10 +138,20 @@
       font-size: 19px;
       line-height: 23px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 11px;
+        font-size: 11px;
+        line-height: 23px;
+      }
     }
 
     .inputField {
       margin-bottom: 22px;
+
+      @media (max-width: $screen_lg) {
+        margin-bottom: 18px;
+      }
     }
 
     .denomination {
@@ -98,6 +163,10 @@
     @include block();
     margin-top: 55px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 35px;
+    }
+
     .button {
       width: 100%;
     }
@@ -107,9 +176,17 @@
     @include block();
     margin-top: 223px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 115px;
+    }
+
     &-cont {
       @include block();
       margin-top: 68px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 40px;
+      }
 
       ol {
         @include block();
@@ -122,6 +199,12 @@
           font-size: 19px;
           line-height: 23px;
           color: $color_text_blue;
+
+          @media (max-width: $screen_lg) {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 15px;
+          }
         }
       }
 
@@ -131,23 +214,46 @@
         font-weight: 400;
         font-size: 19px;
         line-height: 23px;
+
+        @media (max-width: $screen_lg) {
+          margin-bottom: 10px;
+          font-size: 13px;
+          line-height: 15px;
+        }
       }
     }
 
     &-row {
       @include flex();
+
+      @media (max-width: $screen_lg) {
+        display: block;
+      }
     }
 
     &-col {
       position: relative;
       width: 50%;
 
+      @media (max-width: $screen_lg) {
+        display: block;
+        width: auto;
+      }
+
       &:nth-child(1) {
         padding-right: 20px;
+
+        @media (max-width: $screen_lg) {
+          padding-right: 0;
+        }
       }
 
       &:nth-child(2) {
         padding-left: 20px;
+
+        @media (max-width: $screen_lg) {
+          padding-left: 0;
+        }
       }
     }
   }
