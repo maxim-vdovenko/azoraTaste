@@ -177,10 +177,11 @@
   &__button {
     position: relative;
     display: none;
-    margin-top: 30px;
+    margin: 30px auto 0 auto;
 
     @media (max-width: $screen_lg) {
       display: block;
+      max-width: 400px;
     }
   }
 }

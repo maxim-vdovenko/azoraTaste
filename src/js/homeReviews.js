@@ -21,7 +21,9 @@ homeReviews.init = () => {
       th.addClass('open')
       th.parents(homeReviews.bl).find(homeReviews.cont).addClass('open').animate({
         height: h
-      }, homeReviews.time)
+      }, homeReviews.time, () => {
+        th.parents(homeReviews.bl).find(homeReviews.cont).height('auto')
+      })
     }
   })
 }
