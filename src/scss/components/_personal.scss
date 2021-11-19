@@ -3,7 +3,7 @@
   padding: 42px 0 270px 0;
 
   @media (max-width: $screen_lg) {
-    padding: 40px 0 140px 0;
+    padding: 40px 0 100px 0;
   }
 
   &__block {
@@ -35,6 +35,10 @@
         display: block;
         flex: auto;
         margin-top: 60px;
+      }
+
+      @media (max-width: $screen_md) {
+        margin-top: 30px;
       }
     }
   }
@@ -440,6 +444,10 @@
 
     &__item {
       width: 33.33%;
+
+      @media (max-width: $screen_xl) {
+        width: 50%;
+      }
     }
   }
 

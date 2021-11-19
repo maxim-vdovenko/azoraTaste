@@ -3,6 +3,10 @@
   @include block();
   padding: 42px 0 265px 0;
 
+  @media (max-width: $screen_lg) {
+    padding: 40px 0 140px 0;
+  }
+
   &--indentProduct {
     padding-bottom: 200px;
   }
@@ -17,10 +21,19 @@
     @include block();
     margin-top: 22px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 26px;
+    }
+
     p {
       text-align: center;
       font-size: 30px;
       line-height: 36px;
+
+      @media (max-width: $screen_lg) {
+        font-size: 19px;
+        line-height: 23px;
+      }
     }
 
     b, a {
@@ -94,6 +107,15 @@
     position: relative;
     width: 25%;
     padding: 0 11px 40px 11px;
+
+    @media (max-width: $screen_xl) {
+      width: 33.33%;
+    }
+
+    @media (max-width: $screen_lg) {
+      width: 50%;
+      padding-bottom: 20px;
+    }
   }
 
   &__box {
@@ -104,16 +126,31 @@
     padding-bottom: 17px;
     transition: border-color $time;
 
+    @media (max-width: $screen_lg) {
+      border: none;
+      min-height: 310px;
+      padding-bottom: 0;
+    }
+
     .button-like {
       position: absolute;
       top: 15px;
       right: 14px;
       z-index: 1;
+
+      @media (max-width: $screen_lg) {
+        top: 0;
+        right: 0;
+      }
     }
 
     .info-new {
       top: 15px;
       z-index: 1;
+
+      @media (max-width: $screen_lg) {
+        top: 5px;
+      }
     }
 
     &-img {
@@ -124,10 +161,23 @@
         align-items: center;
         justify-content: center;
         min-height: 380px;
+
+        @media (max-width: $screen_md) {
+          min-height: auto;
+          height: 300px;
+          padding: 30px 20px;
+        }
+
+        @media (max-width: $screen_sm) {
+          height: 200px;
+          padding: 15px 10px;
+        }
       }
 
       img {
         max-width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
 
@@ -135,11 +185,20 @@
       @include flex();
       margin: 5px 14px 8px 14px;
 
+      @media (max-width: $screen_lg) {
+        margin: 0 0 4px 0;
+      }
+
       .addition {
         position: absolute;
         right: 0;
         top: 50%;
         margin-top: -17px;
+
+        @media (max-width: $screen_lg) {
+          top: -37px;
+          margin-top: 0;
+        }
       }
     }
 
@@ -147,14 +206,22 @@
       @include flex();
       align-items: center;
       justify-content: flex-start;
+      flex-wrap: wrap;
       min-height: 40px;
+      padding-right: 80px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: 14px;
-      line-height: 12px;
+      line-height: 18px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        min-height: 24px;
+        font-size: 9px;
+        line-height: 11px;
+      }
     }
 
     &-name {
@@ -162,11 +229,21 @@
       max-width: 250px;
       padding: 0 14px;
 
+      @media (max-width: $screen_lg) {
+        max-width: none;
+        padding: 0;
+      }
+
       a {
         font-weight: 700;
         font-size: 30px;
         line-height: 34px;
         text-decoration: none;
+
+        @media (max-width: $screen_lg) {
+          font-size: 15px;
+          line-height: 17px;
+        }
       }
     }
 
@@ -179,6 +256,13 @@
       font-size: 17px;
       line-height: 21px;
       color: $color_text_blue;
+
+      @media (max-width: $screen_lg) {
+        padding: 0;
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 13px;
+      }
     }
 
     &:hover {
@@ -189,5 +273,9 @@
   &__button {
     @include block(center);
     margin-top: 100px;
+
+    @media (max-width: $screen_lg) {
+      margin-top: 4px;
+    }
   }
 }

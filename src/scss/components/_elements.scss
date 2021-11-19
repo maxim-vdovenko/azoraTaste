@@ -363,6 +363,11 @@
   cursor: pointer;
   transition: border-color $time;
 
+  @media (max-width: $screen_lg) {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+  }
+
   &:before, &:after {
     position: absolute;
     top: 0;
@@ -371,6 +376,10 @@
     height: 100%;
     content: '';
     transition: opacity $time;
+
+    @media (max-width: $screen_lg) {
+      background-size: 9px auto !important;
+    }
   }
 
   &:before {
@@ -401,6 +410,11 @@
   &--min {
     width: 34px;
     height: 34px;
+
+    @media (max-width: $screen_lg) {
+      width: 23px;
+      height: 23px;
+    }
 
     &:before, &:after {
       background-size: 12px auto;
@@ -485,6 +499,15 @@
   color: $color_text_blue;
   transition: border-color $time;
 
+  @media (max-width: $screen_lg) {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+    height: 50px;
+    font-size: 10px;
+    line-height: 10px;
+  }
+
   &:after {
     @include inline_block();
     @include image('arrow-down-blue.svg', content, center);
@@ -492,6 +515,11 @@
     height: 4px;
     margin: 0 0 3px 8px;
     content: '';
+
+    @media (max-width: $screen_lg) {
+      width: 6px;
+      height: 4px;
+    }
   }
 
   &:hover {
@@ -685,6 +713,13 @@
   transition: all $additionTime;
   overflow: hidden;
 
+  @media (max-width: $screen_lg) {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: none;
+  }
+
   &__minus, &__plus {
     position: absolute;
     top: 0;
@@ -693,6 +728,10 @@
     cursor: pointer;
     z-index: 1;
     transition: opacity $additionTime;
+
+    @media (max-width: $screen_lg) {
+      width: 31px;
+    }
 
     &:before, &:after {
       position: absolute;
@@ -711,6 +750,10 @@
       width: 6px;
       height: 1px;
       margin: 0 0 0 -5px;
+
+      @media (max-width: $screen_lg) {
+        margin: 0 0 0 -7px;
+      }
     }
 
     &:after {
@@ -725,12 +768,20 @@
       width: 7px;
       height: 1px;
       margin: 0 0 0 -3px;
+
+      @media (max-width: $screen_lg) {
+        margin: 0;
+      }
     }
 
     &:after {
       width: 1px;
       height: 7px;
       margin: -3px 0 0 0px;
+
+      @media (max-width: $screen_lg) {
+        margin: -3px 0 0 3px;
+      }
     }
   }
 
@@ -752,6 +803,12 @@
     color: $color_text_blue;
     transition: opacity $additionTime;
     opacity: 0;
+
+    @media (max-width: $screen_lg) {
+      padding: 0 5px;
+      font-size: 11px;
+      line-height: 18px;
+    }
   }
 
   &:hover {
@@ -761,6 +818,10 @@
   &.active {
     width: 68px;
     border-color: $color_blue;
+
+    @media (max-width: $screen_lg) {
+      width: 62px;
+    }
 
     #{$addition}__minus {
       opacity: 1;
@@ -790,6 +851,13 @@
   color: $color_text_blue;
   text-transform: uppercase;
   background-color: $color_white;
+
+  @media (max-width: $screen_lg) {
+    height: 14px;
+    padding: 0 6px;
+    font-size: 7px;
+    line-height: 10px;
+  }
 }
 
 .deployBox {
