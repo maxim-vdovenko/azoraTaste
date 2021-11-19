@@ -2,12 +2,43 @@
   @include block();
   margin: 167px 0 222px 0;
 
+  @media (max-width: $screen_lg) {
+    margin: 100px 0 170px 0;
+  }
+
+  &__desk {
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
+  }
+
   &__block {
     @include block();
 
     .title {
       max-width: 880px;
       margin: 0 auto;
+
+      @media (max-width: $screen_lg) {
+        max-width: 290px;
+        margin-top: 52px;
+
+        h1, h2 {
+          text-align: left;
+        }
+      }
+
+      @media (max-width: $screen_xs) {
+        margin: 48px 0 0 0;
+      }
     }
   }
 
@@ -15,10 +46,22 @@
     @include block();
     margin-top: -40px;
 
+    @media (max-width: $screen_lg) {
+      margin-top: 0;
+    }
+
     img {
       @include block();
       max-width: 100%;
       margin: 0 auto;
+
+      @media (max-width: $screen_lg) {
+        max-width: 500px;
+      }
+
+      @media (max-width: $screen_xs) {
+        max-width: 300px;
+      }
     }
   }
 
@@ -27,10 +70,20 @@
     max-width: 1100px;
     margin: 44px auto 0 auto;
 
+    @media (max-width: $screen_lg) {
+      margin: 30px auto 0 auto;
+    }
+
     p {
       font-size: 30px;
       line-height: 36px;
       text-align: center;
+
+      @media (max-width: $screen_lg) {
+        font-size: 19px;
+        line-height: 23px;
+        text-align: left;
+      }
     }
 
     b, a {
@@ -48,5 +101,16 @@
     @include flex();
     justify-content: center;
     margin-top: 56px;
+
+    @media (max-width: $screen_lg) {
+      max-width: 400px;
+      margin: 34px auto 0 auto;
+    }
+
+    .button {
+      @media (max-width: $screen_lg) {
+        width: 100%;
+      }
+    }
   }
 }

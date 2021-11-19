@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   let Scrollbar = window.Scrollbar;
+  homeReviews.init()
   counter.init()
   addition.init()
   header.init()
