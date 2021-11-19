@@ -856,9 +856,15 @@
 .radio {
   $radio: &;
   $size: 28px;
+  $size_mobile: 20px;
   position: relative;
   display: block;
   min-height: $size;
+  user-select: none;
+
+  @media (max-width: $screen_lg) {
+    min-height: $size_mobile;
+  }
 
   label {
     position: relative;
@@ -871,6 +877,12 @@
     color: $color_text_blue;
     cursor: pointer;
 
+    @media (max-width: $screen_lg) {
+      padding: 2px 0 0 $size_mobile + 8px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
     &:before, &:after {
       position: absolute;
       top: 0;
@@ -879,6 +891,11 @@
       height: $size;
       border-radius: 1000px;
       content: '';
+
+      @media (max-width: $screen_lg) {
+        width: $size_mobile;
+        height: $size_mobile;
+      }
     }
     &:before {
       border: 1px solid $color_gray;
@@ -889,6 +906,13 @@
       width: 14px;
       height: 14px;
       background-color: $color_gray;
+
+      @media (max-width: $screen_lg) {
+        top: 6px;
+        left: 6px;
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
