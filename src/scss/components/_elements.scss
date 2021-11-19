@@ -507,10 +507,6 @@
   border: 1px solid $color_gray;
   border-radius: 1000px;
 
-  @media (max-width: $screen_lg) {
-    height: 23px;
-  }
-
   &__minus, &__plus {
     position: relative;
     width: 56px;
@@ -572,6 +568,10 @@
   }
 
   &--narrow {
+    @media (max-width: $screen_lg) {
+      height: 23px;
+    }
+
     #{$counter}__minus, 
     #{$counter}__plus {
       width: 51px;
