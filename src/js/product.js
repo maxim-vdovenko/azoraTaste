@@ -12,6 +12,16 @@ product.init = () => {
     cssEase: 'ease-in-out',
     draggable: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 890,
+        settings: {
+          arrows: true,
+          adaptiveHeight: true,
+          speed: 350
+        }
+      }
+    ]
   })
 }

@@ -370,8 +370,17 @@
   transition: border-color $time;
 
   @media (max-width: $screen_lg) {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
+    width: 50px;
+    height: 50px;
+  }
+
+  &:before {
+    @include image('like-gray.svg', 20px auto, center);
+  }
+
+  &:after {
+    @include image('like-blue.svg', 20px auto, center);
+    opacity: 0;
   }
 
   &:before, &:after {
@@ -384,17 +393,9 @@
     transition: opacity $time;
 
     @media (max-width: $screen_lg) {
-      background-size: 9px auto !important;
+      background-size: 16px auto;
+      background-position: top 18px center;
     }
-  }
-
-  &:before {
-    @include image('like-gray.svg', 20px auto, center);
-  }
-
-  &:after {
-    @include image('like-blue.svg', 20px auto, center);
-    opacity: 0;
   }
 
   &:hover {
@@ -418,12 +419,18 @@
     height: 34px;
 
     @media (max-width: $screen_lg) {
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
       width: 23px;
       height: 23px;
     }
 
     &:before, &:after {
       background-size: 12px auto;
+
+      @media (max-width: $screen_lg) {
+        background-size: 9px auto;
+      }
     }
   }
 }
@@ -577,6 +584,10 @@
   height: 64px;
   border: 1px solid $color_gray;
   border-radius: 1000px;
+
+  @media (max-width: $screen_lg) {
+    height: 50px;
+  }
 
   &__minus, &__plus {
     position: relative;
