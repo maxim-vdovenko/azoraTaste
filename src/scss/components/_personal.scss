@@ -282,6 +282,10 @@
   &__order {
     @include block();
 
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
+
     &-head {
       @include flex();
       margin-bottom: 23px;
@@ -294,15 +298,35 @@
 
         &:nth-child(1) {
           width: 23%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+          }
         }
+
         &:nth-child(2) {
           width: 34%;
+
+          @media (max-width: $screen_xl) {
+            width: 40%;
+          }
         }
+
         &:nth-child(3) {
           width: 23%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+            padding-left: 10px;
+          }
         }
+
         &:nth-child(4) {
           width: 20%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+          }
         }
       }
     }
@@ -317,15 +341,35 @@
 
         &:nth-child(1) {
           width: 23%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+          }
         }
+
         &:nth-child(2) {
           width: 34%;
+
+          @media (max-width: $screen_xl) {
+            width: 40%;
+          }
         }
+
         &:nth-child(3) {
           width: 23%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+            padding-left: 10px;
+          }
         }
+
         &:nth-child(4) {
           width: 20%;
+
+          @media (max-width: $screen_xl) {
+            width: 20%;
+          }
         }
       }
     }
@@ -431,6 +475,154 @@
         font-weight: 400;
         font-size: 19px;
         line-height: 24px;
+        color: #A7A7A7;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__orderMobile {
+    position: relative;
+    display: none;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+    }
+
+    &-block {
+      @include block();
+      border-top: 1px solid $color_gray;
+      padding: 24px 0 20px 0;
+    }
+
+    &-row {
+      @include flex();
+     
+      &:not(:last-child) {
+        margin-bottom: 19px;
+      }
+    }
+
+    &-col {
+      position: relative;
+
+      &:nth-child(1) {
+        width: 75px;
+        padding-right: 30px;
+      }
+
+      &:nth-child(2) {
+        flex: 1;
+      }
+    }
+
+    &-title {
+      @include block();
+      padding-top: 2px;
+      font-size: 12px;
+      line-height: 12px;
+      color: $color_text_blue;
+    }
+
+    &-value {
+      @include block();
+      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+      color: $color_text_blue;
+    }
+
+    &-cont {
+      @include flex();
+    }
+
+    &-container {
+      position: relative;
+      display: none;
+    }
+
+    &-contButton {
+      @include block();
+      max-width: 220px;
+      margin-bottom: 12px;
+
+      .button-more {
+        padding: 1px 10px 0 10px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 11px;
+        text-transform: none;
+
+        &:after {
+          margin: 0 0 1px 6px;
+        }
+
+        * {
+          font-family: 'Montserrat', sans-serif !important;
+        }
+      }
+    }
+
+    &-img {
+      @include block();
+      width: 76px;
+      padding: 5px;
+
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-name {
+      @include block();
+      max-width: 130px;
+      padding: 8px 0 0 10px;
+    }
+
+    &-link {
+      @include inline();
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+      color: $color_text_blue;
+      text-decoration: none;
+    }
+
+    &-number {
+      @include block();
+      margin-top: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 15px;
+      color: $color_text_blue;
+    }
+
+    &-tracking {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+
+      &-title {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        color: #A7A7A7;
+      }
+
+      &-value {
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
         color: #A7A7A7;
         background-color: #fff;
       }
