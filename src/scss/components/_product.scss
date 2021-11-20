@@ -78,6 +78,8 @@
     @media (max-width: $screen_lg) {
       margin-top: -30px;
       margin-bottom: 16px;
+      margin-left: -$side_normal;
+      margin-right: -$side_normal;
     }
 
     &:before, &:after {
@@ -87,6 +89,10 @@
       height: 100%;
       content: '';
       z-index: 1;
+
+      @media (max-width: $screen_lg) {
+        width: 40px;
+      }
     }
 
     &:before {
@@ -114,12 +120,12 @@
       
       &.slick-prev {
         @include image('arrow-left-blue.svg', 7px auto, left 15px center);
-        left: -$side_normal;
+        left: 0;
       }
 
       &.slick-next {
         @include image('arrow-right-blue.svg', 7px auto, right 15px center);
-        right: -$side_normal;
+        right: 0;
       }
     }
 
