@@ -3,7 +3,7 @@
   padding: 42px 0 270px 0;
 
   @media (max-width: $screen_lg) {
-    padding: 40px 0 100px 0;
+    padding: 40px 0 120px 0;
   }
 
   &__block {
@@ -484,6 +484,7 @@
   &__orderMobile {
     position: relative;
     display: none;
+    margin-top: 60px;
 
     @media (max-width: $screen_lg) {
       display: block;
