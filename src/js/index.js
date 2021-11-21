@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   counter.init()
   addition.init()
   header.init()
+  catalog.init()
   product.init()
   personal.init()
   ordering.init()

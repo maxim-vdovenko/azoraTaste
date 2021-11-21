@@ -976,85 +976,6 @@
   }
 }
 
-.radio {
-  $radio: &;
-  $size: 28px;
-  $size_mobile: 20px;
-  position: relative;
-  display: block;
-  min-height: $size;
-  user-select: none;
-
-  @media (max-width: $screen_lg) {
-    min-height: $size_mobile;
-  }
-
-  label {
-    position: relative;
-    min-height: $size;
-    padding: 3px 0 0 $size + 9px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 23px;
-    color: $color_text_blue;
-    cursor: pointer;
-
-    @media (max-width: $screen_lg) {
-      padding: 2px 0 0 $size_mobile + 8px;
-      font-size: 16px;
-      line-height: 18px;
-    }
-
-    &:before, &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: $size;
-      height: $size;
-      border-radius: 1000px;
-      content: '';
-
-      @media (max-width: $screen_lg) {
-        width: $size_mobile;
-        height: $size_mobile;
-      }
-    }
-    &:before {
-      border: 1px solid $color_gray;
-    }
-    &:after {
-      top: 8px;
-      left: 8px;
-      width: 14px;
-      height: 14px;
-      background-color: $color_gray;
-
-      @media (max-width: $screen_lg) {
-        top: 6px;
-        left: 6px;
-        width: 10px;
-        height: 10px;
-      }
-    }
-  }
-
-  input {
-    position: absolute;
-    width: 0;
-    height: 0;
-
-    &:checked + label {
-      &:before {
-        border-color: $color_blue;
-      }
-      &:after {
-        background-color: $color_blue;
-      }
-    }
-  }
-}
-
 .denomination {
   @include block();
 
@@ -1207,51 +1128,131 @@
   }
 }
 
-// .checkbox {
-//   $checkbox: &;
-//   $size: 20px;
-//   $indent: 10px;
-//   position: relative;
-//   display: block;
-//   min-height: $size;
+.radio {
+  $radio: &;
+  $size: 28px;
+  $size_mobile: 20px;
+  position: relative;
+  display: block;
+  min-height: $size;
+  user-select: none;
 
-//   label {
-//     position: relative;
-//     min-height: $size;
-//     padding: 1px 0 0 $size + $indent;
-//     color: #F9F9F9;
-//     font-size: 16px;
-//     line-height: 130%;
-//     letter-spacing: -0.01em;
-//     cursor: pointer;
+  @media (max-width: $screen_lg) {
+    min-height: $size_mobile;
+  }
 
-//     &:before, &:after {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: $size;
-//       height: $size;
-//       content: '';
-//     }
-//     &:before {
-//       box-shadow: 0 0 0 1px #7F8389 inset;
-//       border-radius: 3px;
-//     }
-//     &:after {
-//       @include image('icon-check-yellow.svg', 14px auto, 3px 5px);
-//       display: none;
-//     }
-//   }
+  label {
+    position: relative;
+    min-height: $size;
+    padding: 3px 0 0 $size + 9px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    color: $color_text_blue;
+    cursor: pointer;
 
-//   input {
-//     position: absolute;
-//     width: 0;
-//     height: 0;
+    @media (max-width: $screen_lg) {
+      padding: 2px 0 0 $size_mobile + 8px;
+      font-size: 16px;
+      line-height: 18px;
+    }
 
-//     &:checked + label {
-//       &:after {
-//         display: block;
-//       }
-//     }
-//   }
-// }
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      border-radius: 1000px;
+      content: '';
+
+      @media (max-width: $screen_lg) {
+        width: $size_mobile;
+        height: $size_mobile;
+      }
+    }
+    &:before {
+      border: 1px solid $color_gray;
+    }
+    &:after {
+      top: 8px;
+      left: 8px;
+      width: 14px;
+      height: 14px;
+      background-color: $color_gray;
+
+      @media (max-width: $screen_lg) {
+        top: 6px;
+        left: 6px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    &:checked + label {
+      &:before {
+        border-color: $color_blue;
+      }
+      &:after {
+        background-color: $color_blue;
+      }
+    }
+  }
+}
+
+.checkbox, .radio-checkbox {
+  $checkbox: &;
+  $size: 13px;
+  $indent: 8px;
+  position: relative;
+  display: block;
+  min-height: $size;
+  user-select: none;
+
+  label {
+    @include inline_block();
+    min-height: $size;
+    padding-left: $size + $indent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    color: $color_text_blue;
+    cursor: pointer;
+
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      content: '';
+    }
+    &:before {
+      border: 1px solid rgba(44, 59, 140, 0.8);
+    }
+    &:after {
+      @include image('check-blue.svg', 9px auto, 3px 4px);
+      display: none;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    &:checked + label {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
