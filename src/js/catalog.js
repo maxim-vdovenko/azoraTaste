@@ -6,6 +6,11 @@ const catalog = {
     cont: '.catalog__dropdown-cont',
     contBlock: '.catalog__dropdown-contBlock',
     time: 200
+  },
+  filterSlider: {
+    title: '.catalog__filterSlider-title > span',
+    cont: '.catalog__filterSlider-cont',
+    time: 200
   }
 }
 
@@ -48,6 +53,17 @@ catalog.filterEvents = () => {
           }, 1)
         } 
       })
+    }
+  })
+
+  $(catalog.bl).on('click', catalog.filterSlider.title, e => {
+    const th = $(e.currentTarget).parent()
+    if (th.hasClass('active')) {
+      th.removeClass('active')
+      th.next().slideUp(catalog.filterSlider.time)
+    } else {
+      th.addClass('active')
+      th.next().slideDown(catalog.filterSlider.time)
     }
   })
 }

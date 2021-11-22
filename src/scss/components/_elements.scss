@@ -1216,6 +1216,10 @@
   min-height: $size;
   user-select: none;
 
+  @media (max-width: $screen_lg) {
+    min-height: 11px;
+  }
+
   label {
     @include inline_block();
     min-height: $size;
@@ -1227,6 +1231,12 @@
     color: $color_text_blue;
     cursor: pointer;
 
+    @media (max-width: $screen_lg) {
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 13px;
+    }
+
     &:before, &:after {
       position: absolute;
       top: 0;
@@ -1234,6 +1244,11 @@
       width: $size;
       height: $size;
       content: '';
+
+      @media (max-width: $screen_lg) {
+        width: 11px;
+        height: 11px;
+      }
     }
     &:before {
       border: 1px solid rgba(44, 59, 140, 0.8);
@@ -1241,6 +1256,11 @@
     &:after {
       @include image('check-blue.svg', 9px auto, 3px 4px);
       display: none;
+
+      @media (max-width: $screen_lg) {
+        background-size: 7px auto;
+        background-position: 3px 4px;
+      }
     }
   }
 
