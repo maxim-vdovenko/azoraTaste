@@ -199,14 +199,24 @@
       width: 100%;
       min-height: 713px;
       text-decoration: none;
+      cursor: pointer;
 
       @media (max-width: $screen_lg) {
         min-height: auto;
+        height: 500px;
+      }
+
+      @media (max-width: $screen_xs) {
+        height: 400px;
       }
 
       img {
         max-width: 100%;
         object-fit: contain;
+
+        @media (max-width: $screen_lg) {
+          height: 100%;
+        }
       }
     }
   }

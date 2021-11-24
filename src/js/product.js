@@ -1,9 +1,10 @@
 const product = {
-  slider: '.product__slider'
+  bl: '.product',
+  slider: '.product__slider',
+  sliderImg: '.product__slider-img'
 }
 
 product.init = () => {
- 
   $(product.slider).slick({
     dots: true,
     infinite: true,
@@ -18,10 +19,13 @@ product.init = () => {
         breakpoint: 890,
         settings: {
           arrows: true,
-          adaptiveHeight: true,
           speed: 350
         }
       }
     ]
+  })
+
+  $(product.bl).on('click', product.sliderImg, () => {
+    $(product.slider).slick('slickNext')
   })
 }

@@ -209,6 +209,7 @@
     font-size: 19px;
     line-height: 23px;
     color: $color_text_blue;
+    border-radius: 0;
 
     @media (max-width: $screen_lg) {
       height: 50px;
@@ -265,6 +266,7 @@
     line-height: 23px;
     color: $color_text_blue;
     cursor: pointer;
+    border-radius: 0;
 
     @media (max-width: $screen_lg) {
       background-position: right 15px center;
@@ -1195,6 +1197,7 @@
     position: absolute;
     width: 0;
     height: 0;
+    opacity: 0;
 
     &:checked + label {
       &:before {
@@ -1268,6 +1271,7 @@
     position: absolute;
     width: 0;
     height: 0;
+    opacity: 0;
 
     &:checked + label {
       &:after {
