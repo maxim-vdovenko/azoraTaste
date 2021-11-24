@@ -6,17 +6,12 @@ const header = {
   navBasket: '.header__basketNav',
   navBasketLink: '.header__basketNav-link',
   navBasketButt: '.header__basketNav-button',
-  user: '.header__user'
+  user: '.header__user',
+  time: 200
 }
 
 header.init = () => {
-  const options = {
-    // damping: 0.2,
-    // thumbMinSize: 20,
-    // renderByPixels: true,
-    // alwaysShowTracks: true,
-    // continuousScrolling: true
-  }
+  const options = {}
   Scrollbar.init(document.querySelector('.header__basket-cont'), options)
 
   header.menuEvents()
@@ -49,13 +44,17 @@ header.basketEvents = () => {
 }
 
 header.basketOpen = () => {
-  $(header.basket).addClass('active').fadeIn(200)
-  $(header.navMobile).fadeOut(200)
+  $(header.basket).addClass('active').fadeIn(header.time)
+  if (window.innerWidth <= screen.lg) {
+    $(header.navMobile).fadeOut(header.time)
+  }
 }
 
 header.basketClose = () => {
-  $(header.basket).removeClass('active').fadeOut(200)
-  $(header.navMobile).fadeIn(200)
+  $(header.basket).removeClass('active').fadeOut(header.time)
+  if (window.innerWidth <= screen.lg) {
+    $(header.navMobile).fadeIn(header.time)
+  }
 }
 
 header.menuEvents = () => {
