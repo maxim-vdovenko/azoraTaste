@@ -99,7 +99,7 @@
 
       @media (max-width: $screen_lg) {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
       a {
@@ -124,8 +124,8 @@
       color: $color_text_blue;
 
       @media (max-width: $screen_lg) {
-        margin-top: 9px;
-        font-size: 11px;
+        margin-top: 8px;
+        font-size: 13px;
         line-height: 13px;
       }
     }
@@ -156,7 +156,7 @@
       color: $color_text_blue;
 
       @media (max-width: $screen_lg) {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 17px;
       }
     }
@@ -173,7 +173,7 @@
         color: $color_text_blue;
 
         @media (max-width: $screen_lg) {
-          font-size: 11px;
+          font-size: 13px;
           line-height: 13px;
         }
 
@@ -209,8 +209,8 @@
       margin: 27px auto 0 auto;
 
       @media (max-width: $screen_lg) {
-        max-width: 280px;
-        margin-top: 12px;
+        max-width: 300px;
+        margin-top: 20px;
       }
 
       p {
@@ -222,8 +222,8 @@
         color: $color_text_blue;
 
         @media (max-width: $screen_lg) {
-          font-size: 11px;
-          line-height: 13px;
+          font-size: 12px;
+          line-height: 16px;
         }
       }
     }

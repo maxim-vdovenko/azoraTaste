@@ -62,7 +62,7 @@
         padding: 24px 0;
 
         @media (max-width: $screen_lg) {
-          padding: 11px 0;
+          padding: 10px 0;
         }
       }
     }
@@ -76,9 +76,9 @@
       text-decoration: none;
 
       @media (max-width: $screen_lg) {
-        font-size: 11px;
-        line-height: 11px;
-        margin: 3px 0;
+        font-size: 13px;
+        line-height: 13px;
+        margin: 5px 0;
       }
 
       &.active {
@@ -508,7 +508,7 @@
       position: relative;
 
       &:nth-child(1) {
-        width: 75px;
+        width: 85px;
         padding-right: 30px;
       }
 
@@ -519,9 +519,8 @@
 
     &-title {
       @include block();
-      padding-top: 2px;
-      font-size: 12px;
-      line-height: 12px;
+      font-size: 13px;
+      line-height: 13px;
       color: $color_text_blue;
     }
 
@@ -530,7 +529,7 @@
       margin-bottom: 8px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 15px;
       color: $color_text_blue;
     }
@@ -588,7 +587,7 @@
       @include inline();
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 15px;
       color: $color_text_blue;
       text-decoration: none;
@@ -599,7 +598,7 @@
       margin-top: 9px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 400;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 15px;
       color: $color_text_blue;
     }
@@ -613,7 +612,7 @@
         position: relative;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 15px;
         color: #A7A7A7;
       }
@@ -622,7 +621,7 @@
         position: relative;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 15px;
         color: #A7A7A7;
         background-color: #fff;
