@@ -1,3 +1,55 @@
 .ios {
-  // border: 10px solid green;
+  .button {
+    padding-top: 0;
+  }
+  .button-more {
+    padding-top: 0;
+    &:after {
+      margin-top: 3px;
+    }
+  }
+  .info-new {
+    padding-top: 0;
+  }
+
+  .header__menu a:after {
+    bottom: 0;
+  }
+
+  .product__region {
+    i {
+      top: 0;
+    }
+    b {
+      top: 1px;
+
+      @media (max-width: $screen_lg) {
+        top: 0;
+      }
+    }
+  }
+
+  .ordering__delivery-box .radio label {
+    padding-top: 2px;
+  }
+
+  .about__socialNetworks a:after {
+    bottom: -1px;
+
+    @media (max-width: $screen_lg) {
+      bottom: 8px;
+    }
+  }
+
+  .contacts__cont-link:after {
+    bottom: -8px;
+
+    @media (max-width: $screen_lg) {
+      bottom: 2px;
+    }
+  }
+
+  .footer__menu a:after {
+    bottom: 0;
+  }
 }

@@ -235,9 +235,9 @@
       transition: color $time;
 
       @media (max-width: $screen_lg) {
-        padding: 0 3px;
+        padding: 1px 3px 0 3px;
         font-size: 12px;
-        line-height: 23px;
+        line-height: 12px;
       }
     }
 

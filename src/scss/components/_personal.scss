@@ -90,6 +90,7 @@
   &__output {
     @include image('output-gray.svg', auto 14px, right 0 center);
     padding-right: 22px;
+    min-height: 16px;
   }
 
   &__data {
