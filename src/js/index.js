@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   product.init()
   personal.init()
   ordering.init()
+  animations.init()
 })
 
 const screen = {
