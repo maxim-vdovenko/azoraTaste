@@ -22,8 +22,18 @@ const animations = {
     ['.catalog__filters', 90, 0],
     ['.catalog__cont', 0, 0],
     ['.catalog__item', 30, 0],
+    ['.catalog__button', 50],
     ['.product__slider .slick-list', 50],
     ['.product__infoImg', 30],
+    ['.product__slider .slick-dots', 0],
+    ['.product__top', 0],
+    ['.product__price', 0],
+    ['.product__bottom', 0],
+    ['.product__text', 20],
+    // ['.basket__block', 10],
+    // ['.basket__box', 25],
+    // ['.basket__foot', 25],
+    // ['.basket__button', 25],
     ['.footer .patterns__box', 80, 0]
   ]
 }
@@ -31,6 +41,7 @@ const animations = {
 animations.init = () => {
   animations.titleFn()
   animations.commonFn()
+  // animations.basketFn()
 }
 
 animations.act = function(block, height, delay) {
@@ -119,3 +130,26 @@ animations.commonFn = function() {
     }
   })
 }
+
+// animations.basketFn = function() {
+//   const block = $('.basket__block')
+//   const box = $('.basket__box')
+//   const foot = $('.basket__foot')
+//   const button = $('.basket__button')
+
+//   if (box) {
+//     let ind = 0
+//     setTimeout(() => {
+//       box.map((index, item) => {
+//         ind = index * 0.2
+//         $(item).attr('style', 'transition-delay: ' + ind + 's')
+//       })
+//       block.addClass(this.classAdd)
+//       foot.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+//       button.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+//     }, 850)
+//   } else {
+//     foot.addClass(this.classAdd)
+//     button.addClass(this.classAdd)
+//   }
+// }
