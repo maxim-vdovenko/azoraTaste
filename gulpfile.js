@@ -31,6 +31,7 @@ gulp.task('js', () => {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/slick-carousel/slick/slick.min.js',
       'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
+      'node_modules/inputmask/dist/jquery.inputmask.js',
       src + '/js/index.js',
       src + '/js/header.js',
       src + '/js/homeReviews.js',

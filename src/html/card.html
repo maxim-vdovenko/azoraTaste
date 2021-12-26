@@ -1,0 +1,96 @@
+@@include('components/head.html', {"title" : ""})
+
+  <div class="totalContainer"> 
+    
+    @@include('components/header.html')
+
+    <div class="card">
+
+      <div class="container">
+
+        <div class="title title--center"><h1>Оплата заказа 234121 <br/> на сумму <b>24,00 €</b></h1></div>
+      
+        <form class="card__form">
+
+          <div class="card__block">
+
+            <div class="card__box card__box--front">
+
+              <div class="card__inform">
+                <div class="card__inform-box card__inform-box--MasterCard"></div>
+                <div class="card__inform-box card__inform-box--Visa"></div>
+              </div>
+
+              <div class="card__cont">
+
+                <div class="inputField">
+                  <span class="inputField__title">Номер карты</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value input-card" type="text" pattern="[0-9]*" inputmode="numeric" />
+                  </div>
+                </div>
+
+                <div class="card__cont-row">
+
+                  <div class="card__cont-col">
+
+                    <div class="inputField">
+                      <span class="inputField__title">Владелец карты</span>
+                      <div class="inputField__box">
+                        <input class="inputField__value" type="text" />
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="card__cont-col">
+
+                    <div class="inputField">
+                      <span class="inputField__title">Действует до</span>
+                      <div class="inputField__box">
+                        <input class="inputField__value input-date" type="text" pattern="[0-9]*" inputmode="numeric" />
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+  
+            </div>
+  
+            <div class="card__box card__box--back">
+
+              <div class="card__cont">
+
+                <div class="inputField">
+                  <span class="inputField__title">CSV/CVV</span>
+                  <div class="inputField__box">
+                    <input class="inputField__value input-cvv" type="text" pattern="[0-9]*" inputmode="numeric" />
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+  
+          </div>
+
+          <div class="card__button">
+            <button class="button">Оплатить</button>
+          </div>
+
+        </form>
+         
+      </div>
+
+    </div>
+
+    <div class="hFooter"></div>
+
+  </div>
+  
+@@include('components/footer.html')
+@@include('components/end.html')
+   

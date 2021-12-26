@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   product.init()
   personal.init()
   ordering.init()
+  card.init()
 })
 
 const screen = {
@@ -40,4 +41,29 @@ os.detect = () => {
   if (/linux/.test(platform)) return 'Linux'
 
   return 'unknown'
+}
+
+const card = {
+  init: () => {
+    new Inputmask('9999 9999 9999 9999', {
+        placeholder: ' ',
+        showMaskOnHover: false,
+        showMaskOnFocus: false
+    }).mask('.input-card')
+  
+    new Inputmask('99 / 99', {
+        placeholder: ' ',
+        showMaskOnHover: false,
+        showMaskOnFocus: false,
+        alias: "datetime",
+        inputFormat: "mm/yy",
+        greedy: false
+    }).mask('.input-date')
+  
+    new Inputmask('999', {
+        placeholder: ' ',
+        showMaskOnHover: false,
+        showMaskOnFocus: false
+    }).mask('.input-cvv');
+  }
 }

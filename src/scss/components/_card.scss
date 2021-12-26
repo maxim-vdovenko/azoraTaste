@@ -1,0 +1,208 @@
+.card {
+  $card: &;
+  @include block();
+  padding: 60px 0 289px 0;
+
+  @media (max-width: $screen_lg) {
+    padding: 103px 0 183px 0;
+  }
+
+  &__form {
+    @include block();
+
+    @media (max-width: $screen_lg) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__block {
+    @include flex();
+    justify-content: center;
+    margin-top: 59px;
+
+    @media (max-width: $screen_lg) {
+      display: block;
+      margin-top: 48px;
+    }
+  }
+
+  &__box {
+    @include flex();
+    flex-direction: column;
+    height: 375px;
+    padding: 20px 26px 67px 26px;
+
+    &--front {
+      width: 599px;
+      background-color: #E5E5E5;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      z-index: 1;
+
+      @media (max-width: $screen_lg) {
+        padding: 9px 12px 23px 12px;
+        width: 100%;
+        height: 182px;
+      }
+    }
+
+    &--back {
+      width: 228px;
+      margin-left: -20px;
+      padding-left: 45px;
+      background-color: #C4C4C4;
+      border-radius: 0 15px 15px 0;
+
+      @media (max-width: $screen_lg) {
+        align-items: flex-end;
+        padding: 0 12px 20px 12px;
+        margin: -20px 0 0 0;
+        width: 100%;
+        height: 110px;
+        border-radius: 0 0 15px 15px;
+
+        #{$card}__cont {
+          display: flex;
+          width: 40%;
+          padding-left: 3px;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        height: 76px;
+        content: '';
+        background-color: #919191;
+
+        @media (max-width: $screen_lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__inform {
+    @include flex();
+    align-items: center;
+
+    &-box {
+      position: relative;
+      margin-right: 17px;
+
+      @media (max-width: $screen_lg) {
+        margin-right: 8px;
+      }
+
+      &--MasterCard {
+        @include image('card/MasterCard.svg', 100% auto, center);
+        width: 63px;
+        height: 39px;
+
+        @media (max-width: $screen_lg) {
+          width: 31px;
+          height: 20px;
+        }
+      }
+
+      &--Visa {
+        @include image('card/Visa.png', 100% auto, center);
+        width: 77px;
+        height: 25px;
+
+        @media (max-width: $screen_lg) {
+          width: 38px;
+          height: 13px;
+        }
+      }
+    }
+  }
+
+  &__cont {
+    @include block();
+    margin-top: auto;
+    margin-bottom: 0;
+
+    &-row {
+      @include flex();
+      margin: 0 -12px;
+
+      @media (max-width: $screen_lg) {
+        margin: 0 -3px;
+      }
+    }
+
+    &-col {
+      position: relative;
+      padding: 0 12px;
+
+      @media (max-width: $screen_lg) {
+        padding: 0 3px;
+      }
+
+      &:nth-child(1) {
+        width: 68.5%;
+
+        @media (max-width: $screen_lg) {
+          width: 60%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 31.5%;
+
+        @media (max-width: $screen_lg) {
+          width: 40%;
+        }
+      }
+    }
+
+    .inputField {
+      margin-top: 18px;
+
+      @media (max-width: $screen_lg) {
+        margin-top: 9px;
+      }
+
+      &__title {
+        @media (max-width: $screen_lg) {
+          font-size: 12px;
+          line-height: 14px;
+          margin-bottom: 0;
+        }
+      }
+
+      &__value {
+        color: #A7A7A7;
+        
+        @media (max-width: $screen_lg) {
+          height: 40px;
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    @include flex();
+    justify-content: center;
+    margin-top: 49px;
+
+    @media (max-width: $screen_lg) {
+      margin-top: 30px;
+    }
+
+    .button {
+      min-width: 304px;
+
+      @media (max-width: $screen_lg) {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  }
+}

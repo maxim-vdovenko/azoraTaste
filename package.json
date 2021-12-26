@@ -26,6 +26,7 @@
     "outlayer": "^2.1.1"
   },
   "dependencies": {
+    "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.7.0"
