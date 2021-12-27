@@ -10,8 +10,10 @@ const animations = {
     ['.mainPreview__block-button', 100, 0],
     ['.mainPreview__fon-desk', 30, 0],
     ['.mainPreview__block-bottom .patterns__box', 100, 0],
+    ['.mainPreview .delimiter', 100, 0],
+    ['.mainPreview__block-info', 100, 0],
     ['.mainPreview__block-text', 100, 0],
-    ['.homeCatalog__box', 50, 0],
+    ['.homeCatalog__box', 25, 0],
     ['.homeCatalog__button', 100, 0],
     ['.homeReviews__box', 80, 0],
     ['.donateSet__img', 50, 0],
@@ -34,6 +36,8 @@ const animations = {
     // ['.basket__box', 25],
     // ['.basket__foot', 25],
     // ['.basket__button', 25],
+    ['.noPage .patterns__box', 50, 0],
+    ['.noPage__button', 100, 0],
     ['.footer .patterns__box', 80, 0]
   ]
 }
@@ -74,7 +78,7 @@ animations.titleFn = function() {
     const teg = el.find('h1, h2')
     const texts = teg.html()
     const htmlTexts = []
-    const interval = 30
+    const interval = 40
     let delay = 0
   
     el.attr('data-html', el.html())
