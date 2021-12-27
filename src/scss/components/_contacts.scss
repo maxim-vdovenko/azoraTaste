@@ -6,37 +6,42 @@
     padding: 40px 0 140px 0;
   }
 
-  &:before, &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-
+  .patterns__box {
     @media (max-width: $screen_lg) {
       display: none;
     }
-  }
 
-  &:before {
-    @include image('patterns/pattern-5.svg', 298px auto, left 0 top 135px);
-
-    @media (max-width: $width_max) {
-      background-size: 180px auto;
+    &:nth-child(1) {
+      @include image('patterns/contacts/pattern-1.svg', 298px auto, left 0 top 135px);
     }
-  }
 
-  &:after {
-    @include image('patterns/pattern-6.svg', 219px auto, right 0 top 375px);
-
-    @media (max-width: $width_max) {
-      background-size: 120px auto;
+    &:nth-child(2) {
+      @include image('patterns/contacts/pattern-2.svg', 298px auto, left 0 top 135px);
     }
-  }
 
-  #{$cont} {
-    z-index: 1;
+    &:nth-child(3) {
+      @include image('patterns/contacts/pattern-3.svg', 298px auto, left 0 top 135px);
+    }
+
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      @media (max-width: $width_max) {
+        background-size: 180px auto;
+      }
+    }
+
+    &:nth-child(4) {
+      @include image('patterns/contacts/pattern-4.svg', 219px auto, right 0 top 375px);
+    }
+
+    &:nth-child(5) {
+      @include image('patterns/contacts/pattern-5.svg', 219px auto, right 0 top 375px);
+    }
+
+    &:nth-child(4), &:nth-child(5) {
+      @media (max-width: $width_max) {
+        background-size: 120px auto;
+      }
+    }
   }
 
   .title {

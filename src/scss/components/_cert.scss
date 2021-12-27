@@ -7,43 +7,27 @@
     padding: 40px 0 170px 0;
   }
 
-  &:before, &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
+  .patterns__box {
+    &:nth-child(1) {
+      @include image('patterns/cert/pattern-1.svg', 218px auto, left 0 top 144px);
 
-    @media (max-width: $screen_lg) {
-      display: none;
+      @media (max-width: $width_max) {
+        background-size: 140px auto;
+      }
     }
-  }
+    &:nth-child(2) {
+      @include image('patterns/cert/pattern-2.svg', 73px auto, right 0 top 430px);
 
-  &:before {
-    @include image('patterns/pattern-10.svg', 218px auto, left 0 top 144px);
-
-    @media (max-width: $width_max) {
-      background-size: 140px auto;
+      @media (max-width: $width_max) {
+        background-size: 60px auto;
+      }
     }
-  }
-
-  &:after {
-    @include image('patterns/pattern-yellow-1.svg', 73px auto, right 0 top 430px);
-
-    @media (max-width: $width_max) {
-      background-size: 60px auto;
-    }
-  }
-
-  #{$cont} {
-    z-index: 1;
   }
 
   &__title {
     @include block(center);
 
-    span {
+    i, h2 {
       font-weight: 700;
       font-size: 44px;
       line-height: 44px;
@@ -108,7 +92,7 @@
 
     &-cont {
       @include block();
-      margin-top: 65px;
+      margin-top: 49px;
 
       @media (max-width: $screen_lg) {
         margin-top: 42px;
@@ -182,7 +166,7 @@
 
     &-cont {
       @include block();
-      margin-top: 68px;
+      margin-top: 52px;
 
       @media (max-width: $screen_lg) {
         margin-top: 40px;

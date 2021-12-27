@@ -5,39 +5,23 @@
   @media (max-width: $screen_lg) {
     padding: 40px 0 140px 0;
   }
-  
-  &:before, &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
 
-    @media (max-width: $screen_lg) {
-      display: none;
+  .patterns__box {
+    &:nth-child(1) {
+      @include image('patterns/delivery/pattern-1.svg', 73px auto, left 0 top 10px);
+
+      @media (max-width: $width_max) {
+        background-size: 60px auto;
+      }
     }
-  }
+    &:nth-child(2) {
+      @include image('patterns/delivery/pattern-2.svg', 219px auto, right 0 top 100px);
 
-  &:before {
-    @include image('patterns/pattern-red-1.svg', 73px auto, left 0 top 10px);
-    
-    @media (max-width: $width_max) {
-      background-size: 60px auto;
+      @media (max-width: $width_max) {
+        background-size: 140px auto;
+        background-position: right 0 top 210px;
+      }
     }
-  }
-
-  &:after {
-    @include image('patterns/pattern-8.svg', 219px auto, right 0 top 100px);
-
-    @media (max-width: $width_max) {
-      background-size: 140px auto;
-      background-position: right 0 top 210px;
-    }
-  }
-
-  #{$cont} {
-    z-index: 1;
   }
 
   &__inform {
@@ -83,14 +67,14 @@
   }
 
   &__infoTitle {
-    @include block();
+    @include block(center);
     margin: 158px 0 64px 0;
 
     @media (max-width: $screen_lg) {
       margin: 117px 0 42px 0;
     }
 
-    h2 {
+    i, h2 {
       text-align: center;
       font-weight: 700;
       font-size: 44px;
@@ -261,7 +245,7 @@
       margin-top: 112px;
     }
 
-    img {
+    &-img {
       max-width: 100%;
 
       @media (max-width: $screen_lg) {
@@ -310,7 +294,7 @@
         margin-bottom: 31px;
       }
 
-      h2 {
+      i, h2 {
         font-weight: 700;
         font-size: 44px;
         line-height: 44px;

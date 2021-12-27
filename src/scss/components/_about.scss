@@ -7,6 +7,23 @@
     padding: 40px 0 170px 0;
   }
 
+  .patterns__box {
+    &:nth-child(1) {
+      @include image('patterns/about/pattern-1.svg', 294px auto, left 0 bottom 33px);
+    }
+    &:nth-child(2) {
+      @include image('patterns/about/pattern-2.svg', 294px auto, left 0 bottom 33px);
+    }
+
+    @media (max-width: $width_max) {
+      background-size: 200px auto !important;
+    }
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
+  }
+
   &__row {
     @include flex();
 
@@ -17,12 +34,7 @@
     &:nth-child(1) {
       #{$about}__col {
         &:nth-child(1) {
-          @include image('patterns/pattern-7.svg', 294px auto, left 0 bottom 33px);
           padding-top: 5px;
-
-          @media (max-width: $width_max) {
-            background-size: 200px auto;
-          }
 
           @media (max-width: $screen_lg) {
             padding-top: 0;

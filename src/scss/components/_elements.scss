@@ -105,6 +105,10 @@
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: $screen_lg) {
+    display: none;
+  }
 }
 
 .delimiter {

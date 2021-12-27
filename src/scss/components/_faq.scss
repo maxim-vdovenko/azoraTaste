@@ -7,6 +7,26 @@
     padding: 40px 0 140px 0;
   }
 
+  .patterns__box {
+    &:nth-child(1) {
+      @include image('patterns/faq/pattern-1.svg', 298px auto, left 0 bottom 20px);
+    }
+    &:nth-child(2) {
+      @include image('patterns/faq/pattern-2.svg', 298px auto, left 0 bottom 20px);
+    }
+    &:nth-child(3) {
+      @include image('patterns/faq/pattern-3.svg', 298px auto, left 0 bottom 20px);
+    }
+
+    @media (max-width: $width_max) {
+      background-size: 200px auto !important;
+    }
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
+  }
+
   &__row {
     @include flex();
 
@@ -19,18 +39,12 @@
     position: relative;
 
     &:nth-child(1) {
-      @include image('patterns/pattern-9.svg', 298px auto, left 0 bottom 20px);
       width: 34%;
       min-height: 800px;
       padding-top: 5px;
 
-      @media (max-width: $width_max) {
-        background-size: 200px auto;
-      }
-
       @media (max-width: $screen_lg) {
         display: block;
-        background-image: none;
         width: auto;
         min-height: auto;
         padding-top: 0;
