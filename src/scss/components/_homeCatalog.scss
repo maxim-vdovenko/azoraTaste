@@ -162,12 +162,12 @@
         width: 25.5%;
 
         a {
-          top: -68px;
-          right: -125px;
+          top: -40px;
+          right: 5px;
         }
 
         img {
-          max-width: 531px;
+          max-width: 260px;
         }
       }
 
@@ -185,12 +185,12 @@
         width: 42.6%;
 
         a {
-          top: -70px;
-          right: -108px;
+          top: -45px;
+          right: 20px;
         }
 
         img {
-          max-width: 523px;
+          max-width: 250px;
         }
       }
 
@@ -206,7 +206,7 @@
 
   &__button {
     @include flex();
-    margin-top: -32px;
+    margin-top: 60px;
     padding-left: 42%;
 
     @media (max-width: $screen_lg) {
