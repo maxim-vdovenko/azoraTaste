@@ -45,7 +45,7 @@ const animations = {
 animations.init = () => {
   animations.titleFn()
   animations.commonFn()
-  // animations.basketFn()
+  animations.basketFn()
 }
 
 animations.act = function(block, height, delay) {
@@ -135,25 +135,25 @@ animations.commonFn = function() {
   })
 }
 
-// animations.basketFn = function() {
-//   const block = $('.basket__block')
-//   const box = $('.basket__box')
-//   const foot = $('.basket__foot')
-//   const button = $('.basket__button')
+animations.basketFn = function() {
+  const block = $('.basket__block')
+  const box = $('.basket__box')
+  const foot = $('.basket__foot')
+  const button = $('.basket__button')
 
-//   if (box) {
-//     let ind = 0
-//     setTimeout(() => {
-//       box.map((index, item) => {
-//         ind = index * 0.2
-//         $(item).attr('style', 'transition-delay: ' + ind + 's')
-//       })
-//       block.addClass(this.classAdd)
-//       foot.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
-//       button.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
-//     }, 850)
-//   } else {
-//     foot.addClass(this.classAdd)
-//     button.addClass(this.classAdd)
-//   }
-// }
+  if (box) {
+    let ind = 0
+    setTimeout(() => {
+      box.map((index, item) => {
+        ind = index * 0.2
+        $(item).attr('style', 'transition-delay: ' + ind + 's')
+      })
+      block.addClass(this.classAdd)
+      foot.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+      button.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+    }, 850)
+  } else {
+    foot.addClass(this.classAdd)
+    button.addClass(this.classAdd)
+  }
+}
