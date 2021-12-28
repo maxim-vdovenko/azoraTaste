@@ -44,16 +44,12 @@
   span {
     margin: 0 5px;
     overflow: hidden;
+  }
 
+  > span {
     @media (max-width: $screen_lg) {
       display: none;
     }
-  }
-
-  i {
-    opacity: 0;
-    transition: transform 0.4s ease-out, opacity 0.5s ease-out;
-    transform: translateY(100%);
   }
 
   b {
@@ -63,6 +59,12 @@
     line-height: inherit;
     letter-spacing: -0.02em;
     color: inherit;
+  }
+
+  > b {
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
   }
 
   &--max {
@@ -92,13 +94,6 @@
 
   &--center {
     text-align: center;
-  }
-
-  &#{$animationClass} {
-    i {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 

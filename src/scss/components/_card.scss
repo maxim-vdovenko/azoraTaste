@@ -7,6 +7,15 @@
     padding: 103px 0 183px 0;
   }
 
+  .title {
+    max-width: 640px;
+    margin: 0 auto;
+
+    @media (max-width: $screen_lg) {
+      max-width: 330px;
+    }
+  }
+
   &__form {
     @include block();
 

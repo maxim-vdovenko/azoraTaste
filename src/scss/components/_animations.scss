@@ -4,6 +4,20 @@
   $queue_3: .6s;
   $queue_4: .9s;
 
+  .title {
+    i {
+      transition: transform .4s ease-out, opacity .5s ease-out;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    &#{$animationClass} {
+      i {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
   .patterns {
     &__box {
       @include opacityAnm(.5s);
