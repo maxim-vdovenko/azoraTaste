@@ -1,8 +1,5 @@
 @media (min-width: $screen_lg) {
   $time_opacity: .6s;
-  // $queue_2: .25s;
-  // $queue_3: .55s;
-  // $queue_4: .75s;
   $queue_2: .3s;
   $queue_3: .6s;
   $queue_4: .9s;
@@ -129,14 +126,14 @@
   }
 
   .basket {
-    &__block {
-      &#{$animationClass} {
-        .basket__box {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-    }
+    // &__block {
+    //   &#{$animationClass} {
+    //     .basket__box {
+    //       transform: translateY(0);
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
     &__box {
       @include translateAnm(.5s, .8s);
     }
@@ -144,9 +141,6 @@
       @include translateAnm(.7s, 1s);
     }
   }
-
-
-
 
   .ordering {
     &__whom, &__where, &__delivery, &__goods, &__total, &__promo, &__price {

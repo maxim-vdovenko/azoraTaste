@@ -37,6 +37,10 @@
   span {
     margin: 0 5px;
     overflow: hidden;
+
+    @media (max-width: $screen_lg) {
+      display: none;
+    }
   }
 
   i {

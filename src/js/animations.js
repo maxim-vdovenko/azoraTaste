@@ -33,9 +33,9 @@ const animations = {
     ['.product__bottom', 0],
     ['.product__text', 50],
     // ['.basket__block', 10],
-    // ['.basket__box', 25],
-    // ['.basket__foot', 25],
-    // ['.basket__button', 25],
+    ['.basket__box', 25],
+    ['.basket__foot', 25],
+    ['.basket__button', 25],
     ['.ordering__whom', 20],
     ['.ordering__where', 20],
     ['.ordering__delivery', 20],
@@ -79,7 +79,7 @@ const animations = {
 animations.init = () => {
   animations.titleFn()
   animations.commonFn()
-  animations.basketFn()
+  // animations.basketFn()
 }
 
 animations.act = function(block, height, delay) {
@@ -115,8 +115,8 @@ animations.titleFn = function() {
     const interval = 40
     let delay = 0
   
-    el.attr('data-html', el.html())
-    el.empty()
+    // el.attr('data-html', el.html())
+    // el.empty()
 
     for (let a = 0; a < texts.length; a++) {
       
@@ -169,25 +169,25 @@ animations.commonFn = function() {
   })
 }
 
-animations.basketFn = function() {
-  const block = $('.basket__block')
-  const box = $('.basket__box')
-  const foot = $('.basket__foot')
-  const button = $('.basket__button')
+// animations.basketFn = function() {
+//   const block = $('.basket__block')
+//   const box = $('.basket__box')
+//   const foot = $('.basket__foot')
+//   const button = $('.basket__button')
 
-  if (box) {
-    let ind = 0
-    setTimeout(() => {
-      box.map((index, item) => {
-        ind = index * 0.2
-        $(item).attr('style', 'transition-delay: ' + ind + 's')
-      })
-      block.addClass(this.classAdd)
-      foot.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
-      button.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
-    }, 850)
-  } else {
-    foot.addClass(this.classAdd)
-    button.addClass(this.classAdd)
-  }
-}
+//   if (box) {
+//     let ind = 0
+//     setTimeout(() => {
+//       box.map((index, item) => {
+//         ind = index * 0.2
+//         $(item).attr('style', 'transition-delay: ' + ind + 's')
+//       })
+//       block.addClass(this.classAdd)
+//       foot.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+//       button.attr('style', 'transition-delay: ' + ind + 's').addClass(this.classAdd)
+//     }, 850)
+//   } else {
+//     foot.addClass(this.classAdd)
+//     button.addClass(this.classAdd)
+//   }
+// }
