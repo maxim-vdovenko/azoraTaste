@@ -1,13 +1,26 @@
 .ios {
+  .title {
+    span {
+      margin-top: -10px;
+    }
+
+    i {
+      padding-bottom: 10px;
+    }
+  }
+
   .button {
     padding-top: 0;
   }
+
   .button-more {
     padding-top: 0;
+
     &:after {
       margin-top: 3px;
     }
   }
+
   .info-new {
     padding-top: 0;
   }
@@ -20,6 +33,7 @@
     i {
       top: 0;
     }
+
     b {
       top: 1px;
 
