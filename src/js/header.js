@@ -45,6 +45,8 @@ header.basketEvents = () => {
 
 header.basketOpen = () => {
   $(header.basket).addClass('active').fadeIn(header.time)
+  animations.headerBasketFn()
+  
   if (window.innerWidth <= screen.lg) {
     $(header.navMobile).fadeOut(header.time)
   }

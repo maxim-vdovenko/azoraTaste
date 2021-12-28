@@ -175,6 +175,23 @@ animations.commonFn = function() {
   })
 }
 
+animations.headerBasketFn = function() {
+  const box = $('.header__basket-box')
+  const foot = $('.header__basket-foot')
+  let ind = 0
+
+  if (box && foot.hasClass(this.classAdd)) return
+
+  setTimeout(() => {
+    box.map((index, item) => {
+      ind = index * 0.2
+      $(item).attr('style', 'transition-delay: ' + ind + 's')
+    })
+    box.addClass(this.classAdd)
+    foot.addClass(this.classAdd)
+  }, 500)
+}
+
 // animations.basketFn = function() {
 //   const block = $('.basket__block')
 //   const box = $('.basket__box')

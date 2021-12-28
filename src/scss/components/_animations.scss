@@ -26,6 +26,15 @@
 
   .header {
     @include opacityAnm($time_opacity, $queue_3);
+
+    &__basket {
+      &-box {
+        @include opacityAnm(.5s);
+      }
+      &-foot {
+        @include opacityAnm(.5s, .4s);
+      }
+    }
   }
 
   .mainPreview {
