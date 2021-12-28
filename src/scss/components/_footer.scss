@@ -17,59 +17,63 @@
     margin-top: -$footer_height_mobile;
   }
 
-  .patterns__left {
+  .patterns {
     $pat: '.patterns';
 
-    #{$pat}__box {
-      &:nth-child(1) {
-        @include image('patterns/footer/left-1.svg', 146px auto, left 0 bottom);
+    &__left {
+      #{$pat}__box {
+        &:nth-child(1) {
+          @include image('patterns/footer/left-1.svg', 146px auto, left 0 bottom);
+        }
+        &:nth-child(2) {
+          @include image('patterns/footer/left-2.svg', 146px auto, left 0 bottom);
+        }
+  
+        @media (max-width: $screen_xl) {
+          background-size: 100px auto !important;
+        }
+  
+        @media (max-width: $screen_lg) {
+          display: none;
+        }
       }
-      &:nth-child(2) {
-        @include image('patterns/footer/left-2.svg', 146px auto, left 0 bottom);
-      }
-
-      @media (max-width: $screen_xl) {
-        background-size: 100px auto !important;
-      }
-
+  
       @media (max-width: $screen_lg) {
-        display: none;
+        @include image('patterns/footer/footer-1.svg', auto 111px, top);
+      }
+    }
+
+    &__right {  
+      #{$pat}__box {
+        &:nth-child(1) {
+          @include image('patterns/footer/right-1.svg', 365px auto, right 0 bottom);
+        }
+        &:nth-child(2) {
+          @include image('patterns/footer/right-2.svg', 365px auto, right 0 bottom);
+        }
+        &:nth-child(3) {
+          @include image('patterns/footer/right-3.svg', 365px auto, right 0 bottom);
+        }
+        &:nth-child(4) {
+          @include image('patterns/footer/right-4.svg', 365px auto, right 0 bottom);
+        }
+  
+        @media (max-width: $screen_xl) {
+          background-size: 260px auto !important;
+        }
+  
+        @media (max-width: $screen_lg) {
+          display: none;
+        }
+      }
+  
+      @media (max-width: $screen_lg) {
+        @include image('patterns/footer/footer-2.svg', auto 109px, bottom);
       }
     }
 
     @media (max-width: $screen_lg) {
-      @include image('patterns/footer/footer-1.svg', auto 111px, top);
-    }
-  }
-
-  .patterns__right {
-    $pat: '.patterns';
-
-    #{$pat}__box {
-      &:nth-child(1) {
-        @include image('patterns/footer/right-1.svg', 365px auto, right 0 bottom);
-      }
-      &:nth-child(2) {
-        @include image('patterns/footer/right-2.svg', 365px auto, right 0 bottom);
-      }
-      &:nth-child(3) {
-        @include image('patterns/footer/right-3.svg', 365px auto, right 0 bottom);
-      }
-      &:nth-child(4) {
-        @include image('patterns/footer/right-4.svg', 365px auto, right 0 bottom);
-      }
-
-      @media (max-width: $screen_xl) {
-        background-size: 260px auto !important;
-      }
-
-      @media (max-width: $screen_lg) {
-        display: none;
-      }
-    }
-
-    @media (max-width: $screen_lg) {
-      @include image('patterns/footer/footer-2.svg', auto 109px, bottom);
+      display: block;
     }
   }
 
