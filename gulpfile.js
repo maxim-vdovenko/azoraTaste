@@ -32,6 +32,9 @@ gulp.task('js', () => {
       'node_modules/slick-carousel/slick/slick.min.js',
       'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
+      'node_modules/gsap/dist/gsap.min.js',
+      'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+      'node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
       src + '/js/index.js',
       src + '/js/header.js',
       src + '/js/homeReviews.js',
@@ -40,6 +43,7 @@ gulp.task('js', () => {
       src + '/js/elements.js',
       src + '/js/personal.js',
       src + '/js/ordering.js',
+      src + '/js/animations.js'
     ])
   .pipe(concat('index.js'))
   // .pipe(uglify())

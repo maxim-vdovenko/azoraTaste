@@ -27,7 +27,9 @@
   },
   "dependencies": {
     "inputmask": "^5.0.6",
+    "gsap": "^3.9.0",
     "jquery": "^3.6.0",
+    "scrollmagic": "^2.0.8",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.7.0"
   }

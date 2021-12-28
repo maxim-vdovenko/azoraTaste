@@ -1,0 +1,360 @@
+@media (min-width: $screen_lg) {
+  $time_opacity: .6s;
+  $queue_2: .3s;
+  $queue_3: .6s;
+  $queue_4: .9s;
+
+  .patterns {
+    &__box {
+      @include opacityAnm(.5s);
+    }
+  }
+
+  .header {
+    @include opacityAnm($time_opacity, $queue_3);
+  }
+
+  .mainPreview {
+    &__block-button {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+
+    &__fon-desk {
+      @include opacityAnm($time_opacity, $queue_4);
+    }
+
+    &__block-bottom {
+      .patterns__left .patterns__box {
+        &:nth-child(1) {
+          transition-delay: 0;
+        }
+        &:nth-child(2) {
+          transition-delay: .3s;
+        }
+      }
+  
+      .patterns__right .patterns__box {
+        &:nth-child(1) {
+          transition-delay: .45s;
+        }
+        &:nth-child(2) {
+          transition-delay: .1s;
+        }
+      }
+    }
+
+    &__block-info {
+      @include opacityAnm(.6s, .4s);
+    }
+
+    &__block-text {
+      @include opacityAnm(.6s);
+    }
+
+    .delimiter {
+      @include opacityAnm(.8s, .3s);
+    } 
+  }
+
+  .homeCatalog {
+    &__box, &__button {
+      @include translateAnm(.6s, .8s);
+    }
+  }
+
+  .homeReviews {
+    &__box { 
+      @include translateAnm(.5s, .6s, 40px);
+    }
+  }
+
+  .donateSet {
+    &__img, &__description, &__button {
+      @include opacityAnm(.7s);
+    }
+  }
+
+  .catalog {
+    &__text { 
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__filters {
+      @include opacityAnm(.6s, .25s);
+    }
+    &__cont {
+      @include opacityAnm(.6s, .25s);
+    }
+    &__item {
+      @include translateAnm(.5s, .8s);
+  
+      &#{$animationClass} {  
+        &:nth-child(4n + 1) { 
+          transition-delay: .1s;
+        }
+        &:nth-child(4n + 2) { 
+          transition-delay: .2s;
+        }
+        &:nth-child(4n + 3) { 
+          transition-delay: .3s;
+        }
+        &:nth-child(4n + 4) { 
+          transition-delay: .4s;
+        }
+      }
+    }
+    &__button {
+      @include translateAnm(.8s, 1s, 30px);
+    }
+  }
+
+  .product {
+    &__slider .slick-list {
+      @include translateAnm(.5s, .8s, 60px, .3s);
+    }
+    &__infoImg {
+      @include translateAnm(1s, 1s, 100px);
+    }
+    &__slider .slick-dots {
+      @include opacityAnm(.6s, 1s);
+    }
+    &__top, &__price, &__bottom {
+      @include opacityAnm($time_opacity, $queue_4);
+    }
+    &__text {
+      @include opacityAnm(.6s);
+    }
+  }
+
+  .basket {
+    // &__block {
+    //   &#{$animationClass} {
+    //     .basket__box {
+    //       transform: translateY(0);
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
+    &__box {
+      @include translateAnm(.5s, .8s);
+    }
+    &__foot, &__button {
+      @include translateAnm(.7s, 1s);
+    }
+  }
+
+  .ordering {
+    &__whom, &__where, &__delivery, &__goods, &__total, &__promo, &__price {
+      @include translateAnm(.6s, .8s, 100px);
+    }
+  }
+
+  .authorization {
+    &__block {
+      @include opacityAnm(.6s, .1s);
+    }
+  }
+
+  .personal {
+    &__block-cont {
+      @include opacityAnm(.6s, .1s);
+    }
+  }
+
+  .cert {
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: .7s;
+      }
+      &:nth-child(2) {
+        transition-delay: .8s;
+      }
+    }
+    &__block-text {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__block-info {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__step, &__button {
+      @include translateAnm(.6s, .8s, 100px);
+    }
+    &__instruction-row {
+      @include opacityAnm(.6s, .2s);
+    }
+  }
+
+  .delivery {
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: .7s;
+      }
+      &:nth-child(2) {
+        transition-delay: .8s;
+      }
+    }
+    &__inform {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__table {
+      @include opacityAnm(.6s, .15s);
+    }
+    &__info {
+      @include opacityAnm(.6s, .15s);
+    }
+    &__block-text {
+      @include opacityAnm(.6s, .15s);
+    }
+    &__block-img {
+      @include translateAnm(.6s, .3s, 80px);
+    }
+    &__block-list {
+      @include opacityAnm(.6s, .15s);
+    }
+  }
+
+  .about {
+    $about: &;
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: .7s;
+      }
+      &:nth-child(2) {
+        transition-delay: .8s;
+      }
+    }
+    &__delimiterDesk {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__socialNetworks {
+      @include opacityAnm($time_opacity, .5s);
+    }
+    &__row:nth-child(1) {
+      #{$about}__col:nth-child(2) {
+        #{$about}__text {
+          @include opacityAnm($time_opacity, $queue_2);
+        }
+      }
+    }
+    &__row:nth-child(2) {
+      #{$about}__col:nth-child(1) {
+        #{$about}__text {
+          @include opacityAnm($time_opacity, .1s);
+        }
+      }
+      #{$about}__col:nth-child(2) {
+        #{$about}__text {
+          @include opacityAnm($time_opacity, .4s);
+        }
+      }
+    }
+  }
+
+  .faq {
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: 0;
+      }
+      &:nth-child(2) {
+        transition-delay: .1s;
+      }
+      &:nth-child(3) {
+        transition-delay: .2s;
+      }
+    }
+    &__block {
+      @include opacityAnm($time_opacity, .9s);
+    }
+  }
+
+  .contacts {
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: .7s;
+      }
+      &:nth-child(2) {
+        transition-delay: .8s;
+      }
+      &:nth-child(3) {
+        transition-delay: .9s;
+      }
+      &:nth-child(4) {
+        transition-delay: 1s;
+      }
+      &:nth-child(5) {
+        transition-delay: 1.1s;
+      }
+    }
+    &__text {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+    &__cont {
+      @include opacityAnm($time_opacity, $queue_4);
+    }
+  }
+
+  .success {
+    &__text, &__button {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+  }
+
+  .noPage {
+    .patterns__box {
+      &:nth-child(1) {
+        transition-delay: .7s;
+      }
+      &:nth-child(2) {
+        transition-delay: .8s;
+      }
+      &:nth-child(3) {
+        transition-delay: .9s;
+      }
+      &:nth-child(4) {
+        transition-delay: 1s;
+      }
+      &:nth-child(5) {
+        transition-delay: 1.1s;
+      }
+    }
+    &__button {
+      @include opacityAnm($time_opacity, $queue_2);
+    }
+  }
+
+  .footer {
+    &__col {
+      @include opacityAnm(.6s);
+
+      &--0 {
+        transition-delay: .1s;
+      }
+      &--1 {
+        transition-delay: .3s;
+      }
+    }
+
+    .patterns__left .patterns__box {
+      &:nth-child(1) {
+        transition-delay: 0;
+      }
+      &:nth-child(2) {
+        transition-delay: .15s;
+      }
+    }
+
+    .patterns__right .patterns__box {
+      &:nth-child(1) {
+        transition-delay: 0;
+      }
+      &:nth-child(2) {
+        transition-delay: .15s;
+      }
+      &:nth-child(3) {
+        transition-delay: .3s;
+      }
+      &:nth-child(4) {
+        transition-delay: .45s;
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ img {
   border: none; 
 }
 
-a, span, b, strong {
+a, span, b, strong, i {
   @include inline_block();
   color: $color_text_blue;
 }

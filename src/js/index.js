@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   personal.init()
   ordering.init()
   card.init()
+  animations.init()
 })
 
 const screen = {

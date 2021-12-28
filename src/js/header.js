@@ -69,6 +69,7 @@ header.menuEvents = () => {
 
 header.menuOpen = () => {
   $(header.menuMobile).fadeIn(250)
+  $(header.menuMobile).addClass('active')
   $(header.navMobile).addClass('active')
   $(header.logo).addClass('openMenu')
   $(header.user).addClass('openMenu')
@@ -78,6 +79,7 @@ header.menuOpen = () => {
 }
 
 header.menuClose = () => {
+  $(header.menuMobile).removeClass('active')
   $(header.menuMobile).fadeOut(250, () => {
     $('body').removeClass('activeMobileMenu')
   })

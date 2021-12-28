@@ -99,6 +99,28 @@
   }
 }
 
+@mixin opacityAnm($time: .5s, $delay: 0, $fun: ease-in-out) {
+  transition: opacity $time $fun;
+  transition-delay: $delay;
+  opacity: 0;
+
+  &#{$animationClass} {
+    opacity: 1;
+  }
+}
+
+@mixin translateAnm($time_t: .5s, $time_o: .5s, $y: 60px, $delay: 0, $fun_t: ease-out, $fun_o: ease-in-out) {
+  transform: translateY($y);
+  transition: transform $time_t $fun_t, opacity $time_o $fun_o;
+  transition-delay: $delay;
+  opacity: 0;
+
+  &#{$animationClass} {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @mixin b($col: #f00) {
   border: 1px solid $col;
 }
