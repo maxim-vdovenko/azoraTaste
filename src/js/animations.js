@@ -43,7 +43,6 @@ const animations = {
     ['.ordering__total', 20],
     ['.ordering__promo', 20],
     ['.ordering__price', 20],
-
     ['.authorization__block', 0],
     ['.personal__block-cont', 0],
     ['.cert .patterns__box', 0],
@@ -80,6 +79,13 @@ animations.init = () => {
   animations.titleFn()
   animations.commonFn()
   // animations.basketFn()
+}
+
+animations.resizeFn = () => {
+  let scene;
+  if (screen.lg < $(window).outerWidth()) scene = true
+  else scene = false
+  return scene
 }
 
 animations.act = function(block, height, delay) {

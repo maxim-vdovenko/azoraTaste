@@ -15,13 +15,20 @@
   font-size: 60px;
   line-height: 60px;
 
+  @media (max-width: $screen_lg) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   h1, h2 {
-    @include block();
+    position: relative;
+    display: none;
     text-align: inherit;
     font-size: inherit;
     line-height: inherit;
 
     @media (max-width: $screen_lg) {
+      display: block;
       font-size: inherit;
       line-height: inherit;
     }
